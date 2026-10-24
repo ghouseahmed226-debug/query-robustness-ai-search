@@ -45,8 +45,8 @@ class Collection:
         return sorted(ids, key=natural_key)
 
 
-_DOC_RE = re.compile(r"<DOC>\s*<DOCNO>\s*(\S+?)\s*</DOCNO>(.*?)</DOC>", re.DOTALL | re.IGNORECASE)
-_TOP_RE = re.compile(r"<top>\s*<num>\s*(\S+?)\s*</num>\s*<title>(.*?)</title>\s*</top>", re.DOTALL | re.IGNORECASE)
+_DOC_RE = re.compile(r"<DOC>\s*<DOCNO>\s*(\S+?)\s*</DOCNO>(.*?)</DOC>", re.S | re.I)
+_TOP_RE = re.compile(r"<top>\s*<num>\s*(\S+?)\s*</num>\s*<title>(.*?)</title>\s*</top>", re.S | re.I)
 
 
 def load_vaswani(root, lowercase_queries: bool = True) -> Collection:

@@ -193,13 +193,13 @@ def main(argv=None) -> int:
         print(f"#  Dataset: {dataset.upper()}")
         print(f"{'#'*70}")
 
-        # ── 1. Download ───────────────────────────────────────────────────────
+        # -- 1. Download -------------------------------------------------------
         if "download" in steps:
             run([sys.executable, str(SCRIPTS / "fetch_beir.py"),
                  dataset, "--out", str(data_root)],
                 f"Download {dataset}")
 
-        # ── 2. Automatic rewrites ─────────────────────────────────────────────
+        # -- 2. Automatic rewrites ---------------------------------------------
         if "auto-rewrites" in steps:
             run([sys.executable, str(SCRIPTS / "make_rewrites.py"),
                  "automatic",
@@ -210,7 +210,7 @@ def main(argv=None) -> int:
                  "--seed", str(args.seed)],
                 f"Automatic rewrites: {dataset}")
 
-        # ── 3. LLM rewrites ───────────────────────────────────────────────────
+        # -- 3. LLM rewrites ---------------------------------------------------
         if "llm-rewrites" in steps and args.llm_model.lower() != "none":
             llm_cmd = [sys.executable, str(SCRIPTS / "generate_beir_rewrites.py"),
                        "--data-dir", str(data_dir),
@@ -225,7 +225,7 @@ def main(argv=None) -> int:
         elif "llm-rewrites" in steps:
             print(f"\n  [SKIP] llm-rewrites for {dataset}: --llm-model=none")
 
-        # ── 4. Build candidate file ───────────────────────────────────────────
+        # -- 4. Build candidate file -------------------------------------------
         if "candidate-file" in steps and args.llm_model.lower() != "none" and llm_raw_out.exists():
             run([sys.executable, str(SCRIPTS / "make_rewrites.py"),
                  "llm",
@@ -236,7 +236,7 @@ def main(argv=None) -> int:
                  "--out", str(llm_cand_out)],
                 f"Build LLM candidate file: {dataset}")
 
-        # ── 5. Review packet ──────────────────────────────────────────────────
+        # -- 5. Review packet --------------------------------------------------
         if "packet" in steps and auto_out.exists() and llm_cand_out.exists():
             run([sys.executable, str(SCRIPTS / "make_rewrites.py"),
                  "packet",
@@ -256,10 +256,10 @@ def main(argv=None) -> int:
                 print("!"*70)
                 print("\n  (use --skip-human-review to proceed with llm_reviewed status instead)")
                 if len(args.datasets) > 1:
-                    print("  Continuing to next dataset …")
+                    print("  Continuing to next dataset ...")
                 continue
 
-        # ── 6. Author recheck (word-order) ────────────────────────────────────
+        # -- 6. Author recheck (word-order) ------------------------------------
         if auto_out.exists() and not recheck_out.exists():
             run([sys.executable, str(SCRIPTS / "make_rewrites.py"),
                  "recheck",
@@ -267,7 +267,7 @@ def main(argv=None) -> int:
                  "--out", str(recheck_out)],
                 f"Author recheck: {dataset}", check=False)
 
-        # ── 7. Merge ──────────────────────────────────────────────────────────
+        # -- 7. Merge ----------------------------------------------------------
         if "merge" in steps:
             label_files = sorted(packet_dir.glob("labels_*.jsonl")) if packet_dir.exists() else []
             if not label_files and not args.skip_human_review:
@@ -295,7 +295,7 @@ def main(argv=None) -> int:
             if not final_rewrites.exists() or "merge" in steps:
                 run(merge_cmd, f"Merge reviews: {dataset}", check=False)
 
-        # ── 8. Experiment ─────────────────────────────────────────────────────
+        # -- 8. Experiment -----------------------------------------------------
         if "experiment" in steps and (final_rewrites.exists() or auto_out.exists()):
             rewrites = final_rewrites if final_rewrites.exists() else auto_out
             exp_cmd = [sys.executable, str(SCRIPTS / "run_experiment.py"),
@@ -318,7 +318,7 @@ def main(argv=None) -> int:
                 exp_cmd.append("--ignore-identical-ids")
             run(exp_cmd, f"Experiment: {dataset}")
 
-        # ── 9. Analysis ───────────────────────────────────────────────────────
+        # -- 9. Analysis -------------------------------------------------------
         if "analysis" in steps and result_dir.exists():
             run([sys.executable, str(SCRIPTS / "analyze.py"),
                  "--run-dir", str(result_dir)],

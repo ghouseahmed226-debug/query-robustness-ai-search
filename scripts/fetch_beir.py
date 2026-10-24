@@ -33,7 +33,7 @@ try:
 except ImportError:
     _req = None
 
-# ── dataset registry ──────────────────────────────────────────────────────────
+# -- dataset registry ----------------------------------------------------------
 BASE_URL = "https://public.ukp.informatik.tu-darmstadt.de/thakur/BEIR/datasets"
 
 DATASETS: dict[str, dict] = {
@@ -94,7 +94,7 @@ def sha256_file(path: Path, chunk: int = 1 << 20) -> str:
 
 
 def download_with_progress(url: str, label: str) -> bytes:
-    print(f"  downloading {label} …", end=" ", flush=True)
+    print(f"  downloading {label} ...", end=" ", flush=True)
     with _req.urlopen(url, timeout=120) as resp:
         total = int(resp.headers.get("Content-Length", 0))
         buf = io.BytesIO()
@@ -108,7 +108,7 @@ def download_with_progress(url: str, label: str) -> bytes:
             downloaded += len(block)
             if total:
                 pct = downloaded / total * 100
-                print(f"\r  downloading {label} … {pct:5.1f}%", end="", flush=True)
+                print(f"\r  downloading {label} ... {pct:5.1f}%", end="", flush=True)
     print(f"\r  downloaded  {label}  ({downloaded / 1e6:.1f} MB)    ")
     return buf.getvalue()
 
@@ -125,7 +125,7 @@ def fetch_one(name: str, out_root: Path) -> dict:
         print(f"  licence: {info['licence']}")
         print(f"  note:    {info['note']}")
         data = download_with_progress(url, name)
-        print("  extracting …", end=" ", flush=True)
+        print("  extracting ...", end=" ", flush=True)
         with zipfile.ZipFile(io.BytesIO(data)) as zf:
             # BEIR zips have a top-level directory whose name matches the dataset
             members = zf.namelist()
@@ -175,7 +175,7 @@ def main(argv=None) -> int:
             print(f"[{name}] FAILED: {exc}", file=sys.stderr)
             results.append({"name": name, "status": "error", "error": str(exc)})
 
-    print("\n── summary ──────────────────────────────────────────────────────")
+    print("\n-- summary ------------------------------------------------------")
     ok = [r["name"] for r in results if r.get("status") == "ok"]
     bad = [r["name"] for r in results if r.get("status") != "ok"]
     if ok:

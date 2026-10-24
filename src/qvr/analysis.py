@@ -11,13 +11,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from .stats import (
-    bootstrap_mean_ci,
-    bootstrap_ratio_change_ci,
-    holm_adjust,
-    sign_flip_pvalue,
-    spearman_cluster_bootstrap,
-)
+from .stats import (bootstrap_mean_ci, bootstrap_ratio_change_ci, holm_adjust, sign_flip_pvalue,
+                    spearman_cluster_bootstrap)
 
 PRIMARY = "ndcg@10"
 EFFECT_METRICS = ("ndcg@10", "recall@100", "mrr@10")
@@ -25,7 +20,7 @@ HYBRID_COMPONENTS = {"rrf_bm25_lsa": ("bm25", "lsa"), "rrf_bm25_dense": ("bm25",
 
 
 def _stability_columns(rew: pd.DataFrame) -> list[str]:
-    return [c for c in rew.columns if c.startswith(("overlap@", "rbo_p"))]
+    return [c for c in rew.columns if c.startswith("overlap@") or c.startswith("rbo_p")]
 
 
 def _category_frame(rew_s: pd.DataFrame, orig_s: pd.DataFrame, category: str, stab: list[str], group: str = "category"):

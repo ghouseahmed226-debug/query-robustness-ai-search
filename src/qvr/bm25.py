@@ -36,7 +36,7 @@ class BM25Index:
         self.doc_len: np.ndarray | None = None
         self.avgdl: float = 0.0
 
-    def fit(self, doc_ids, texts) -> BM25Index:
+    def fit(self, doc_ids, texts) -> "BM25Index":
         doc_ids = list(doc_ids)
         texts = list(texts)
         if len(doc_ids) != len(texts):

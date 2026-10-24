@@ -7,6 +7,7 @@ from __future__ import annotations
 import numpy as np
 from scipy import stats as sps
 
+
 _CHUNK = 1_000  # bootstrap replicates drawn per block, so memory stays bounded for large query sets
 
 

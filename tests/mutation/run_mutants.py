@@ -6,12 +6,7 @@
 M01b is an equivalent mutant (nDCG is invariant to the logarithm base because the base cancels in nDCG/IDCG), so one
 survivor is expected; any other survivor means the tests are too weak for that part of the code.
 """
-import os
-import shutil
-import subprocess
-import sys
-import tempfile
-import time
+import os, shutil, subprocess, sys, tempfile, time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -55,7 +50,7 @@ def patch(path: Path, old, new):
     path.write_text(s.replace(old, new))
 
 def main():
-    only = sys.argv[1:]
+    only = sys.argv[1:] 
     results = []
     for name, fname, old, new in MUTANTS:
         if old is None:
@@ -68,12 +63,12 @@ def main():
         shutil.copytree(SRC, d / "qvr", ignore=shutil.ignore_patterns("__pycache__"))
         patch(d / "qvr" / fname, old, new)
         env = dict(os.environ, PYTHONPATH=f"{d}:{TESTS}")
-        chk = subprocess.run([PY, "-c", "import qvr; print(qvr.__file__)"], env=env, capture_output=True, text=True, cwd=str(d), check=False)
+        chk = subprocess.run([PY, "-c", "import qvr; print(qvr.__file__)"], env=env, capture_output=True, text=True, cwd=str(d))
         assert str(d) in chk.stdout, f"mutant import path wrong: {chk.stdout} {chk.stderr}"
         t0 = time.time()
-        r = subprocess.run([PY, "-m", "pytest", "-x", "-q", "-p", "no:cacheprovider", str(TESTS)], env=env, capture_output=True, text=True, cwd=str(d), check=False)
+        r = subprocess.run([PY, "-m", "pytest", "-x", "-q", "-p", "no:cacheprovider", str(TESTS)], env=env, capture_output=True, text=True, cwd=str(d))
         failed = r.returncode != 0
-        last = [line for line in r.stdout.splitlines() if line.startswith("FAILED") or "error" in line.lower()][:1]
+        last = [l for l in r.stdout.splitlines() if l.startswith("FAILED") or "error" in l.lower()][:1]
         results.append((name, "KILLED" if failed else "SURVIVED", round(time.time() - t0, 1), last[0][:110] if last else ""))
         print(results[-1], flush=True)
     surv = [r for r in results if r[1] == "SURVIVED"]

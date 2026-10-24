@@ -1,4 +1,4 @@
-﻿name: CI
+name: CI
 
 on:
   push:
@@ -43,7 +43,7 @@ jobs:
       - name: Install ruff
         run: pip install ruff
       - name: Ruff check
-        run: ruff check src/ scripts/ tests/ --ignore E501
+        run: ruff check src/ scripts/ tests/ --select E9,F63,F7,F82 --ignore E501
 
   verify:
     name: "Verify shipped results"

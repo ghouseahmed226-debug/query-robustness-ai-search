@@ -2,13 +2,8 @@ import numpy as np
 import pytest
 from scipy import stats as sps
 
-from qvr.stats import (
-    bootstrap_mean_ci,
-    bootstrap_ratio_change_ci,
-    holm_adjust,
-    sign_flip_pvalue,
-    spearman_cluster_bootstrap,
-)
+from qvr.stats import (bootstrap_mean_ci, bootstrap_ratio_change_ci, holm_adjust, sign_flip_pvalue,
+                       spearman_cluster_bootstrap)
 
 
 def test_bootstrap_mean_ci_matches_t_interval():

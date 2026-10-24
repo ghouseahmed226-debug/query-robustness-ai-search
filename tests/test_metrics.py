@@ -44,8 +44,8 @@ def test_matches_ranx_means():
     scored = {q: {d: float(len(r) - i) for i, d in enumerate(r)} for q, r in run.items()}
     ref = ranx.evaluate(ranx.Qrels(pos), ranx.Run(scored), ["ndcg@10", "recall@100", "mrr@10"])
     ours = {m: np.mean([score_ranking(run[q], qrels[q])[m] for q in run]) for m in ("ndcg@10", "recall@100", "mrr@10")}
-    for m, val in ours.items():
-        assert val == pytest.approx(ref[m], abs=1e-9), m
+    for m in ours:
+        assert ours[m] == pytest.approx(ref[m], abs=1e-9), m
 
 
 def test_hand_computed_ndcg():

@@ -5,7 +5,7 @@ the system's output moved when the query was rewritten.
 """
 from __future__ import annotations
 
-from collections.abc import Sequence
+from typing import Sequence
 
 
 def overlap_at_k(a: Sequence[str], b: Sequence[str], k: int = 10) -> float:

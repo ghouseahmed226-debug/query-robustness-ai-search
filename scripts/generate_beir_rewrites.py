@@ -47,13 +47,13 @@ from pathlib import Path
 
 from qvr.data import load_beir
 
-# ── prompt template ───────────────────────────────────────────────────────────
+# -- prompt template -----------------------------------------------------------
 # Produces all three variants in one call per query to save round-trips.
 SYSTEM_PROMPT = """\
 You are a search-query rewriting assistant for an information retrieval research study.
 For each query I give you, produce exactly three rewritten versions that preserve the
 original meaning.  Return ONLY a JSON object with these three keys:
-  "LLM_NaturalQuestion"  - rephrase as a natural spoken question (how/what/why…)
+  "LLM_NaturalQuestion"  - rephrase as a natural spoken question (how/what/why...)
   "LLM_Paraphrase"       - paraphrase using different words; same intent
   "LLM_SynonymSwap"      - replace content words with synonyms; keep the structure
 
@@ -98,7 +98,7 @@ def call_api(client, model: str, messages: list[dict], temperature: float,
             if attempt == retries - 1:
                 raise
             if any(code in err for code in ("429", "500", "502", "503", "504")):
-                print(f"    transient error (attempt {attempt + 1}): {err[:80]}; retrying in {delay:.0f}s …",
+                print(f"    transient error (attempt {attempt + 1}): {err[:80]}; retrying in {delay:.0f}s ...",
                       file=sys.stderr)
                 time.sleep(delay)
                 delay = min(delay * 2, 60)
@@ -160,26 +160,26 @@ def main(argv=None) -> int:
     ap.add_argument("--retries", type=int, default=5)
     args = ap.parse_args(argv)
 
-    # ── load collection ───────────────────────────────────────────────────────
+    # -- load collection -------------------------------------------------------
     coll = load_beir(args.data_dir, args.split)
     judged = coll.judged_queries()
     if args.max_queries:
         judged = judged[:args.max_queries]
     queries = {q: coll.queries[q] for q in judged}
 
-    # ── dry-run ───────────────────────────────────────────────────────────────
+    # -- dry-run ---------------------------------------------------------------
     if args.dry_run:
         sample_qid = next(iter(queries))
         sample_q = queries[sample_qid]
         msgs = build_prompt(sample_q)
         print(f"Dataset : {coll.name}  ({len(judged)} judged queries)")
         print(f"Model   : {args.model}  T={args.temperature}  max_tokens={args.max_tokens}")
-        print(f"\n── sample prompt for qid={sample_qid} ──────────────────────────")
+        print(f"\n-- sample prompt for qid={sample_qid} --------------------------")
         for m in msgs:
             print(f"[{m['role']}]\n{m['content']}\n")
         return 0
 
-    # ── import openai ─────────────────────────────────────────────────────────
+    # -- import openai ---------------------------------------------------------
     try:
         from openai import OpenAI
     except ImportError:
@@ -193,12 +193,12 @@ def main(argv=None) -> int:
         client_kwargs["base_url"] = args.base_url
     client = OpenAI(**client_kwargs)
 
-    # ── paths ─────────────────────────────────────────────────────────────────
+    # -- paths -----------------------------------------------------------------
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     log_path = Path(args.log) if args.log else out_path.with_suffix(".log.jsonl")
 
-    # ── resume support ────────────────────────────────────────────────────────
+    # -- resume support --------------------------------------------------------
     already_done: set[str] = set()
     if args.resume and out_path.exists():
         with open(out_path, encoding="utf-8") as f:
@@ -212,7 +212,7 @@ def main(argv=None) -> int:
         print("All queries already processed.  Nothing to do.")
         return 0
 
-    # ── run info ──────────────────────────────────────────────────────────────
+    # -- run info --------------------------------------------------------------
     run_info = {
         "script": "generate_beir_rewrites.py",
         "timestamp_utc": datetime.now(tz=timezone.utc).isoformat(),
@@ -228,7 +228,7 @@ def main(argv=None) -> int:
         "user_template": USER_TEMPLATE,
     }
 
-    print("\n── generate_beir_rewrites ────────────────────────────────────────")
+    print("\n-- generate_beir_rewrites ----------------------------------------")
     print(f"  dataset  : {coll.name}  ({len(coll.doc_ids):,} docs, {len(judged)} judged queries)")
     print(f"  model    : {args.model}  T={args.temperature}  max_tokens={args.max_tokens}")
     print(f"  queries  : {len(todo)} to process  ({len(already_done)} already done)")
@@ -240,8 +240,8 @@ def main(argv=None) -> int:
     print("protocol into docs/LLM_REWRITE_PROTOCOL.md and committed it.")
     print()
 
-    # ── draft protocol note ───────────────────────────────────────────────────
-    print("── draft protocol entry (paste into docs/LLM_REWRITE_PROTOCOL.md) ──")
+    # -- draft protocol note ---------------------------------------------------
+    print("-- draft protocol entry (paste into docs/LLM_REWRITE_PROTOCOL.md) --")
     print(f"""
 ## BEIR rewrite run: {coll.name} ({datetime.now(timezone.utc).strftime('%Y-%m-%d')})
 
@@ -258,7 +258,7 @@ def main(argv=None) -> int:
 [Add: model version / API snapshot date, any manual changes made after generation]
 """)
 
-    # ── main loop ─────────────────────────────────────────────────────────────
+    # -- main loop -------------------------------------------------------------
     n_ok = 0
     n_fail = 0
     total_prompt_tokens = 0
@@ -272,7 +272,7 @@ def main(argv=None) -> int:
 
         for i, (qid, query) in enumerate(todo.items(), 1):
             messages = build_prompt(query)
-            print(f"  [{i:4d}/{len(todo)}] qid={qid:12s}  {query[:60]}", end=" … ", flush=True)
+            print(f"  [{i:4d}/{len(todo)}] qid={qid:12s}  {query[:60]}", end=" ... ", flush=True)
 
             try:
                 raw_text, usage = call_api(
@@ -313,8 +313,8 @@ def main(argv=None) -> int:
             if args.batch_delay and i < len(todo):
                 time.sleep(args.batch_delay)
 
-    # ── summary ───────────────────────────────────────────────────────────────
-    print("\n── done ──────────────────────────────────────────────────────────")
+    # -- summary ---------------------------------------------------------------
+    print("\n-- done ----------------------------------------------------------")
     print(f"  ok:        {n_ok}")
     print(f"  failed:    {n_fail}")
     print(f"  tokens:    ~{total_prompt_tokens:,} prompt + ~{total_completion_tokens:,} completion")

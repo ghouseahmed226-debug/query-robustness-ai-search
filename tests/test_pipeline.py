@@ -3,10 +3,10 @@ import json
 
 import pandas as pd
 import pytest
-from synthetic import HashingEncoder, build_collection, make_rewrites
 
 from qvr.metrics import score_ranking
 from qvr.run import RunConfig, run_experiment
+from synthetic import HashingEncoder, build_collection, make_rewrites
 
 SYSTEMS = ["bm25", "lsa", "dense", "rrf_bm25_lsa", "rrf_bm25_dense"]
 
@@ -49,7 +49,7 @@ def test_dropword_changes_something(synthetic_run):
 
 
 def test_csv_metrics_equal_recomputation_from_saved_rankings(synthetic_run):
-    out, coll, _recs = synthetic_run
+    out, coll, recs = synthetic_run
     orig, rew = load(out)
     for system in ("bm25", "rrf_bm25_lsa"):
         rankings = {}
@@ -122,7 +122,7 @@ def test_ignore_identical_ids(tmp_path):
         out = tmp_path / str(flag)
         run_experiment(coll, [], RunConfig(systems=("bm25",), ignore_identical_ids=flag), out)
         with gzip.open(out / "rankings" / "bm25.jsonl.gz", "rt") as f:
-            rank[flag] = {json.loads(line)["key"]: json.loads(line)["docs"] for line in f}[qid]
+            rank[flag] = {json.loads(l)["key"]: json.loads(l)["docs"] for l in f}[qid]
     assert qid in rank[False][:3]
     assert qid not in rank[True]
 
@@ -140,7 +140,7 @@ def test_retrieval_depth_is_exactly_top_k(tmp_path):
     coll = build_collection()
     recs = make_rewrites(coll)
     shallow, deep = tmp_path / "shallow", tmp_path / "deep"
-    base = {"lsa_dim": 20, "discard_identical_rewrites": False}
+    base = dict(lsa_dim=20, discard_identical_rewrites=False)
     run_experiment(coll, recs, RunConfig(systems=("bm25", "lsa", "rrf_bm25_lsa"), top_k=15, **base), shallow)
     run_experiment(coll, recs, RunConfig(systems=("bm25", "lsa"), top_k=100, **base), deep)
     for system in ("bm25", "lsa", "rrf_bm25_lsa"):
