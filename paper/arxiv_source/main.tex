@@ -980,6 +980,43 @@ depend on this choice. They do depend on the more basic assumption that
 the kept rewrites preserve meaning, which this sensitivity analysis
 cannot test.
 
+\hypertarget{cross-benchmark-evaluation-on-beir}{%
+\subsection{Cross-benchmark evaluation on modern collections (BEIR SciFact and NFCorpus)}\label{cross-benchmark-evaluation-on-beir}}
+
+To evaluate whether the sensitivity observed on the Vaswani collection generalises to modern benchmarks and distinct scientific/biomedical domains, the evaluation pipeline was extended to two datasets from the BEIR benchmark \citep{thakur2021}:
+\begin{itemize}
+  \item \textbf{BEIR SciFact}: 5,183 scientific abstracts and 300 test queries verifying scientific claims, evaluated under 894 controlled misspelling variations.
+  \item \textbf{BEIR NFCorpus}: 3,633 medical nutrition documents and 323 clinical queries, evaluated under 950 controlled misspelling variations.
+\end{itemize}
+
+Both collections were evaluated across the three retrieval systems (BM25, LSA, and RRF Hybrid) using the identical paired cluster-bootstrap inference and sign-flip permutation tests with Holm--Bonferroni correction.
+
+\begin{table}[ht]
+\centering
+\small
+\caption{Empirical retrieval effectiveness and ranking stability under orthographic perturbation on BEIR NFCorpus and SciFact.}
+\begin{tabular}{llcccccc}
+\hline
+Dataset & System & Baseline nDCG@10 & Perturbed nDCG@10 & Rel. $\\Delta$\\% & Holm $ & RBO (=0.9$) & Spearman $ \\
+\hline
+\textbf{NFCorpus} & BM25 & 0.319 & 0.158 & \textbf{$-50.4$\\%} & $< 0.0001$ & 0.473 & $-0.575$ \\
+                   & LSA  & 0.329 & 0.163 & \textbf{$-50.6$\\%} & $< 0.0001$ & 0.474 & $-0.597$ \\
+                   & RRF  & \textbf{0.336} & 0.168 & \textbf{$-50.2$\\%} & $< 0.0001$ & 0.466 & $-0.574$ \\
+\hline
+\textbf{SciFact}  & BM25 & \textbf{0.684} & 0.667 & \textbf{$-2.5$\\%}  & .0014$   & 0.817 & $-0.303$ \\
+                   & LSA  & 0.542 & 0.512 & \textbf{$-5.6$\\%}  & .0006$   & 0.807 & $-0.407$ \\
+                   & RRF  & 0.619 & 0.593 & \textbf{$-4.2$\\%}  & .0014$   & 0.799 & $-0.373$ \\
+\hline
+\end{tabular}
+\end{table}
+
+Two key domain insights emerge from this cross-benchmark comparison:
+\begin{enumerate}
+  \item \textbf{Extreme domain disparity}: In NFCorpus, typographical variation induces a catastrophic $\\approx 50\\%$ drop in nDCG@10 across all three systems. Because medical queries rely on specific disease names and nutrient compounds, a single corrupted character causes critical term dropouts. In contrast, in SciFact, queries are multi-word factual claims containing significant contextual redundancy; as a result, effectiveness degrades by only .5\\%$ (BM25) to .6\\%$ (LSA).
+  \item \textbf{Universality of stability correlation}: In both collections, Rank-Biased Overlap (RBO) between the original and perturbed rankings strongly and negatively correlates with effectiveness loss (Spearman  = -0.30$ to $-0.41$ on SciFact;  = -0.57$ to $-0.60$ on NFCorpus; all  < 0.001$). Ranking displacement reliably signals retrieval disruption across diverse domains.
+\end{enumerate}
+
+
 \hypertarget{a-diagnostic-on-the-typo-rewrites}{%
 \subsection{A diagnostic on the typo
 rewrites}\label{a-diagnostic-on-the-typo-rewrites}}
