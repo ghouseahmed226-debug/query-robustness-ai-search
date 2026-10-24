@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qvr"
+version = "0.1.0"
+description = "Query-variation robustness experiments: BM25 / dense / hybrid retrieval, metrics, ranking stability and paired cluster-bootstrap statistics"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "pandas>=2.0",
+  "scikit-learn>=1.3",
+  "snowballstemmer>=2.2",
+  "tqdm>=4.65",
+]
+
+[project.optional-dependencies]
+dense = ["sentence-transformers>=2.7"]
+plots = ["matplotlib>=3.7"]
+test = ["pytest", "pytrec_eval-terrier", "ranx", "bm25s", "rbo"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+qvr = ["resources/*.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# Collection files downloaded by scripts/fetch_vaswani.py (check the terms of use before redistributing)
+data/raw/vaswani/doc-text.trec
+data/raw/vaswani/query-text.trec
+data/raw/vaswani/qrels
+
+# Scratch output of the PDF build (the stand-alone LaTeX source is in paper/arxiv_source/)
+paper/build/
+
+# Output of re-runs described in the README
+results/vaswani_rerun/

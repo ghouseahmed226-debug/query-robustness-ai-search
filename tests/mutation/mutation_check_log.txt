@@ -1,0 +1,29 @@
+('M01 nDCG shifted discount', 'KILLED', 10.4, '/home/claude/qrk/tests/test_metrics.py:35: AssertionError')
+('M01b nDCG natural-log discount (equivalent: nDCG is base-invariant)', 'SURVIVED', 12.1, '')
+('M02 MRR off-by-one', 'KILLED', 3.7, '/home/claude/qrk/tests/test_metrics.py:37: AssertionError')
+('M03 Recall counts one extra rank', 'KILLED', 8.7, '/home/claude/qrk/tests/test_metrics.py:79: AssertionError')
+('M04 BM25 idf without +1', 'KILLED', 3.3, 'E           AssertionError: ')
+('M05 BM25 numerator constant dropped', 'KILLED', 3.4, 'E           AssertionError: ')
+('M06 RBO wrong prefactor', 'KILLED', 8.4, '/home/claude/qrk/tests/test_pipeline.py:39: AssertionError')
+('M07 RBO wrong extrapolation denominator', 'KILLED', 9.0, "E               AssertionError: ('bm25', 'q0_0__drop')")
+('M08 RRF rank offset', 'KILLED', 4.3, '/home/claude/qrk/tests/test_fusion.py:9: AssertionError')
+('M09 top-k ties broken by descending index', 'KILLED', 3.6, '/home/claude/qrk/tests/test_bm25.py:86: AssertionError')
+('M10 Holm without monotonic running max', 'KILLED', 12.2, 'E       AssertionError: ')
+('M11 exact sign-flip ignores ties with observed', 'KILLED', 3.3, '/home/claude/qrk/tests/test_analysis.py:107: AssertionError')
+('M12 analysis: relative change as mean of ratios', 'KILLED', 3.2, '/home/claude/qrk/tests/test_analysis.py:25: AssertionError')
+('M13 run: delta computed against the wrong sign', 'KILLED', 8.8, 'E           AssertionError: d_ndcg@10')
+('M14 run: RBO computed on reversed pair depth', 'KILLED', 8.5, "E               AssertionError: ('bm25', 'q0_0__drop')")
+('M15 bm25 search keeps zero-score docs', 'KILLED', 3.8, '/home/claude/qrk/tests/test_bm25.py:70: AssertionError')
+('M16 analysis uses only the first rewrite per query', 'KILLED', 3.6, '/home/claude/qrk/tests/test_analysis.py:98: AssertionError')
+('M17 analysis skips Holm correction', 'KILLED', 3.4, '/home/claude/qrk/tests/test_analysis.py:109: AssertionError')
+('M18 sign-flip statistic is sum of |d|', 'KILLED', 12.0, '/home/claude/qrk/tests/test_stats.py:34: AssertionError')
+('M19 overlap normalised by list length instead of k', 'KILLED', 10.7, 'E       AssertionError: assert 1.0 == 0.5')
+('M20 rewrites default admits LLM-reviewed', 'KILLED', 10.5, "E       AssertionError: assert ['a', 'b'] == ['a']")
+('M21 run: identical rewrites no longer discarded', 'KILLED', 10.1, "E       KeyError: 'identical_to_original'")
+('M22 run: original ranking cut at depth 99', 'KILLED', 10.8, 'E           AssertionError: bm25')
+
+22/23 mutants killed; survivors: ['M01b nDCG natural-log discount (equivalent: nDCG is base-invariant)']
+
+real	2m48.470s
+user	2m42.630s
+sys	0m6.373s

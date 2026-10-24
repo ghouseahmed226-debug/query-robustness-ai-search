@@ -1,0 +1,9 @@
+# Minimal runtime dependencies of the `qvr` package (the same list is in pyproject.toml; prefer: pip install -e ".[plots,test]").
+# Extras: plots -> matplotlib; test -> pytest, pytrec_eval-terrier, ranx, bm25s, rbo; dense -> sentence-transformers (neural runs, not used in the pilot).
+# The original kit's requirements (beir, rank-bm25, ir-measures, ...) belonged to the starter script, which was not used; see legacy/kit_original/requirements.txt.
+numpy>=1.24
+scipy>=1.10
+pandas>=2.0
+scikit-learn>=1.3
+snowballstemmer>=2.2
+tqdm>=4.65
