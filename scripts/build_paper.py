@@ -90,8 +90,7 @@ def load_all(root: Path) -> dict:
 def _num(x: float, nd: int, plus: bool = False) -> str:
     s = f"{x:.{nd}f}"
     if float(s) == 0:
-        s = s.lstrip("-")
-        return s if not plus else s  # zero carries no sign
+        return s.lstrip("-")
     if s.startswith("-"):
         return MINUS + s[1:]
     return ("+" + s) if plus else s
@@ -109,7 +108,7 @@ def fmt_scalar(v, fmt: str) -> str:
     if fmt == "str":
         return str(v)
     if fmt == "int":
-        return f"{int(round(float(v))):,}"
+        return f"{round(float(v)):,}"
     if fmt in {"f2", "f3", "f4"}:
         return _num(float(v), int(fmt[1]))
     if fmt == "f3s":
@@ -159,11 +158,11 @@ CI_FORMATS = {"pctci", "pctci_t", "f3ci", "f3ci_t", "f3sci_t", "f2ci_t", "f2sci"
 def count_tests() -> int:
     """Number of collected tests (parametrised cases included), so the text never quotes a stale count."""
     out = subprocess.run([sys.executable, "-m", "pytest", "--collect-only", "-q", "-p", "no:cacheprovider", str(ROOT / "tests")],
-                         capture_output=True, text=True, cwd=ROOT)
+                         capture_output=True, text=True, cwd=ROOT, check=False)
     m = re.search(r"(\d+) tests? collected", out.stdout)
     if m:
         return int(m.group(1))
-    per_file = [int(x) for x in re.findall(r"^\S+\.py: (\d+)$", out.stdout, re.M)]
+    per_file = [int(x) for x in re.findall(r"^\S+\.py: (\d+)$", out.stdout, re.MULTILINE)]
     if per_file:
         return sum(per_file)
     n = len([line for line in out.stdout.splitlines() if "::" in line])
@@ -363,7 +362,7 @@ def check_counts(d) -> list[str]:
             n = int(d["main"]["p"].loc[(s, c)]["n_rewrites"])
             if n != kept_by_cat[c]:
                 errs.append(f"primary table n_rewrites {s}/{c} = {n}, rewrite file says {kept_by_cat[c]}")
-    if meta["analysis_plan_sha256"] if "analysis_plan_sha256" in meta else False:
+    if meta.get("analysis_plan_sha256", False):
         pass
     return errs
 
@@ -371,8 +370,11 @@ def check_counts(d) -> list[str]:
 def claims(d) -> list[tuple[str, bool]]:
     m, r = d["main"], d["rev"]
     P, G, B, H, S = m["p"], m["g"], m["b"], m["h"], m["s"]
-    ci = lambda row: (row["ndcg@10_rel_lo"], row["ndcg@10_rel_hi"])
-    excl0 = lambda row: ci(row)[1] < 0 or ci(row)[0] > 0
+    def ci(row):
+        return (row["ndcg@10_rel_lo"], row["ndcg@10_rel_hi"])
+
+    def excl0(row):
+        return ci(row)[1] < 0 or ci(row)[0] > 0
     out = []
     out.append(("misspelling: every system has Holm p < 0.001", all(P.loc[(s, "misspelling")]["p_holm"] < 0.001 for s in SYSTEMS)))
     out.append(("misspelling: every system's CI excludes 0 and the change is negative",

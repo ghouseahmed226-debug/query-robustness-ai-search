@@ -179,7 +179,7 @@ def main(argv=None) -> int:
           str(sum(len(v) for v in qrels.values())))
 
     # 1-2: per-query metrics from the saved rankings ---------------------------------------------------------
-    rewrite_ids = {r["rewrite_id"]: r for r in (json.loads(l) for l in (run / "rewrites_used.jsonl").read_text().splitlines())}
+    rewrite_ids = {r["rewrite_id"]: r for r in (json.loads(line) for line in (run / "rewrites_used.jsonl").read_text().splitlines())}
     max_diff = {"ndcg@10": 0.0, "recall@100": 0.0, "mrr@10": 0.0, "overlap@10": 0.0}
     rbo_pairs, rbo_max = 0, 0.0
     mine_o: dict[tuple[str, str], dict] = {}
@@ -344,19 +344,19 @@ def main(argv=None) -> int:
     quoted = {int(m) for m in re.findall(r"(\d+) automated tests", saved)}
     try:
         out = subprocess.run([sys.executable, "-m", "pytest", "--collect-only", "-q", "-p", "no:cacheprovider", str(ROOT / "tests")],
-                             capture_output=True, text=True, cwd=ROOT, timeout=300)
+                             capture_output=True, text=True, cwd=ROOT, timeout=300, check=False)
         m = re.search(r"(\d+) tests? collected", out.stdout)
         if m:
             n_collected = int(m.group(1))
         else:  # pytest -q prints one "path: count" line per file (newer versions) or one node id per test (older versions)
-            per_file = [int(x) for x in re.findall(r"^\S+\.py: (\d+)$", out.stdout, re.M)]
-            n_collected = sum(per_file) if per_file else len([l for l in out.stdout.splitlines() if "::" in l])
+            per_file = [int(x) for x in re.findall(r"^\S+\.py: (\d+)$", out.stdout, re.MULTILINE)]
+            n_collected = sum(per_file) if per_file else len([line for line in out.stdout.splitlines() if "::" in line])
         check("test count quoted in the manuscript equals the number of collected tests", quoted == {n_collected},
               f"manuscript {sorted(quoted)}, collected {n_collected}")
         if args.run_tests:
             res = subprocess.run([sys.executable, "-m", "pytest", "-p", "no:cacheprovider", str(ROOT / "tests")],
-                                 capture_output=True, text=True, cwd=ROOT, timeout=1800)
-            summary = next((l.strip(" =") for l in reversed(res.stdout.splitlines()) if re.search(r"\d+ passed", l)), res.stderr[-200:])
+                                 capture_output=True, text=True, cwd=ROOT, timeout=1800, check=False)
+            summary = next((line.strip(" =") for line in reversed(res.stdout.splitlines()) if re.search(r"\d+ passed", line)), res.stderr[-200:])
             check("full test suite passes", res.returncode == 0, summary)
     except Exception as exc:  # noqa: BLE001
         check("pytest available to count tests", False, str(exc))
@@ -365,8 +365,8 @@ def main(argv=None) -> int:
     print(f"\n{len(RESULTS) - n_fail} of {len(RESULTS)} checks passed")
     if args.out:
         lines = ["# Independent verification report", "",
-                 "Produced by `scripts/verify_results.py`, which recomputes the reported numbers from the saved rankings and the relevance "
-                 "judgments without using the `qvr` package. See the docstring of the script for what each check does.", "",
+                 ("Produced by `scripts/verify_results.py`, which recomputes the reported numbers from the saved rankings and the relevance "
+                 "judgments without using the `qvr` package. See the docstring of the script for what each check does."), "",
                  "| result | check | detail |", "|:--|:--|:--|"]
         lines += [f"| {'PASS' if ok else '**FAIL**'} | {n} | {d} |" for n, ok, d in RESULTS]
         lines += ["", f"{len(RESULTS) - n_fail} of {len(RESULTS)} checks passed."]

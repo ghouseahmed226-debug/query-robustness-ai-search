@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from collections import defaultdict
-from typing import Sequence
+from collections.abc import Sequence
 
 
 def rrf_fuse(ranked_lists: Sequence[Sequence[str]], k: int = 60, depth: int | None = 100,

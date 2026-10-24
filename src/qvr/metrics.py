@@ -10,7 +10,7 @@ Conventions (identical to ``trec_eval`` / ``pytrec_eval`` as used by BEIR, verif
 from __future__ import annotations
 
 import math
-from typing import Mapping, Sequence
+from collections.abc import Mapping, Sequence
 
 
 def _dcg(gains: Sequence[float]) -> float:

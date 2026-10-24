@@ -3,12 +3,11 @@ from __future__ import annotations
 
 import re
 import unicodedata
-from typing import Iterable
+from collections.abc import Iterable
 
 # Lucene / Elasticsearch default English stop-word set (33 words).
 LUCENE_ENGLISH_STOPWORDS = frozenset(
-    "a an and are as at be but by for if in into is it no not of on or such that the their then there "
-    "these they this to was will with".split()
+    ["a", "an", "and", "are", "as", "at", "be", "but", "by", "for", "if", "in", "into", "is", "it", "no", "not", "of", "on", "or", "such", "that", "the", "their", "then", "there", "these", "they", "this", "to", "was", "will", "with"]
 )
 
 _TOKEN_RE = re.compile(r"[a-z0-9]+")

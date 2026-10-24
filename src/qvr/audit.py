@@ -194,7 +194,7 @@ def audit_markdown(report: dict) -> str:
         lines.append(row(f"kept, {g}", d))
     ra = report.get("reviewer_agreement")
     if ra:
-        lines += ["", f"Agreement with the blind LLM reviewer on {ra['n']} rewrites: raw {ra['raw_agreement']:.3f}, "
+        lines += ["", (f"Agreement with the blind LLM reviewer on {ra['n']} rewrites: raw {ra['raw_agreement']:.3f}, "
                       f"Cohen's kappa {ra['kappa_4_labels']:.3f} (4 labels), {ra['kappa_equivalent_vs_not']:.3f} "
-                      f"(equivalent vs not)."]
+                      f"(equivalent vs not).")]
     return "\n".join(lines)

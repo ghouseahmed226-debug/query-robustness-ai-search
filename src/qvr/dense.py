@@ -33,7 +33,7 @@ class LSAEncoder:
         self._doc: np.ndarray | None = None
         self.n_components_: int | None = None
 
-    def fit(self, texts) -> "LSAEncoder":
+    def fit(self, texts) -> LSAEncoder:
         texts = list(texts)
         self.vectorizer = TfidfVectorizer(
             analyzer=self.analyzer, sublinear_tf=True, use_idf=True, smooth_idf=True, norm="l2"
@@ -125,7 +125,7 @@ class DenseIndex:
         self.doc_ids: list[str] = []
         self.D: np.ndarray | None = None
 
-    def fit(self, doc_ids, texts) -> "DenseIndex":
+    def fit(self, doc_ids, texts) -> DenseIndex:
         self.doc_ids = list(doc_ids)
         texts = list(texts)
         if hasattr(self.encoder, "fit"):

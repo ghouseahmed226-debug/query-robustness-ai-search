@@ -15,9 +15,9 @@ from pathlib import Path
 import matplotlib
 
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt  # noqa: E402
-import pandas as pd  # noqa: E402
-from matplotlib.lines import Line2D  # noqa: E402
+import matplotlib.pyplot as plt
+import pandas as pd
+from matplotlib.lines import Line2D
 
 SURFACE, INK, INK2, GRID = "#ffffff", "#0b0b0b", "#52514e", "#e3e2de"
 SYSTEMS = [("bm25", "BM25", "#2a78d6", "o"), ("lsa", "LSA (non-neural)", "#eb6834", "s"),
@@ -63,7 +63,7 @@ def main(argv=None) -> int:
     ax.tick_params(axis="y", length=0)
     ax.annotate("exactly 0 by construction:\nthese systems ignore word order", xy=(0, ypos["ordering"]), xytext=(5.5, ypos["ordering"]),
                 va="center", fontsize=7.5, color=INK2)
-    handles = [Line2D([0], [0], marker=m, color=c, lw=1.6, ms=7.5, mec=SURFACE, mew=1.2, label=l) for _, l, c, m in SYSTEMS]
+    handles = [Line2D([0], [0], marker=m, color=c, lw=1.6, ms=7.5, mec=SURFACE, mew=1.2, label=sys_label) for _, sys_label, c, m in SYSTEMS]
     ax.legend(handles=handles, loc="lower left", bbox_to_anchor=(0.0, 1.0), ncol=3, frameon=False, fontsize=8,
               handletextpad=0.5, columnspacing=1.6, borderaxespad=0.2)
     fig.tight_layout()

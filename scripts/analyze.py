@@ -19,22 +19,22 @@ def build_markdown(res: dict, meta: dict) -> str:
     counts = meta["counts"]
     out += [f"* collection: `{meta['collection']['name']}` ({meta['collection'].get('n_docs')} documents)",
             f"* queries analysed: {counts['queries_selected']}",
-            f"* valid rewrites analysed: {counts['rewrites_kept']} "
-            f"(by category: {counts['rewrites_kept_by_category']}; by status: {counts['rewrites_kept_by_status']})",
+            (f"* valid rewrites analysed: {counts['rewrites_kept']} "
+            f"(by category: {counts['rewrites_kept_by_category']}; by status: {counts['rewrites_kept_by_status']})"),
             f"* rewrites dropped before the run: {counts['rewrites_dropped']}", ""]
     out += ["## Original queries", "", md_table(res["baseline"], ["system", "n_queries", "ndcg@10", "ndcg@10_lo", "ndcg@10_hi",
                                                                   "recall@100", "mrr@10"]), ""]
     p = res["primary"].copy()
     out += ["## Primary: nDCG@10 under each variation category", "",
-            "`rel` is the relative change of the mean (ratio of means over the queries that have a valid rewrite in the "
+            ("`rel` is the relative change of the mean (ratio of means over the queries that have a valid rewrite in the "
             "category); intervals are 95% cluster-bootstrap CIs over original queries; `p_holm` is Holm-adjusted over "
-            f"{int(p['holm_family_size'].iloc[0])} tests.", "",
+            f"{int(p['holm_family_size'].iloc[0])} tests."), "",
             md_table(p, ["system", "category", "n_queries", "n_rewrites", "ndcg@10_orig", "ndcg@10_rewrite", "ndcg@10_delta",
                          "ndcg@10_delta_lo", "ndcg@10_delta_hi", "ndcg@10_rel", "ndcg@10_rel_lo", "ndcg@10_rel_hi",
                          "p_signflip", "p_holm"], "{:.4f}"), ""]
     out += ["## Secondary metrics", "",
             md_table(p, ["system", "category", "recall@100_delta", "recall@100_rel", "mrr@10_delta", "mrr@10_rel"], "{:.4f}"), ""]
-    stab_cols = [c for c in p.columns if (c.startswith("overlap@") or c.startswith("rbo_p")) and not c.endswith(("_lo", "_hi"))]
+    stab_cols = [c for c in p.columns if (c.startswith(("overlap@", "rbo_p"))) and not c.endswith(("_lo", "_hi"))]
     out += ["## Ranking stability (original vs rewrite ranking of the same system)", "",
             md_table(p, ["system", "category"] + stab_cols, "{:.3f}"), ""]
     if len(res["by_generator"]):

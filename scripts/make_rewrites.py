@@ -21,14 +21,25 @@ from __future__ import annotations
 import argparse
 import json
 import random
-import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
 from qvr.data import load_beir, load_vaswani, natural_key
-from qvr.rewrites import (AUTOMATIC, CATEGORY_OF_GENERATOR, LLM_REVIEWED, REVIEW_LABELS, UNREVIEWED, audit_sample,
-                          generate_automatic, merge_reviews, normalise_query, read_jsonl,
-                          swap_touches_only_function_words, write_audit_sheet, write_jsonl)
+from qvr.rewrites import (
+    AUTOMATIC,
+    CATEGORY_OF_GENERATOR,
+    LLM_REVIEWED,
+    REVIEW_LABELS,
+    UNREVIEWED,
+    audit_sample,
+    generate_automatic,
+    merge_reviews,
+    normalise_query,
+    read_jsonl,
+    swap_touches_only_function_words,
+    write_audit_sheet,
+    write_jsonl,
+)
 from qvr.text import Analyzer
 
 TYPO_GENERATORS = ("NeighbCharSwap", "RandomCharSub", "QWERTYCharSub")

@@ -5,7 +5,13 @@ import pytest
 from scipy import stats as sps
 from sklearn.metrics import cohen_kappa_score
 
-from qvr.audit import (apply_human_labels, cohen_kappa, make_blind_sheet, score_audit, wilson_interval)
+from qvr.audit import (
+    apply_human_labels,
+    cohen_kappa,
+    make_blind_sheet,
+    score_audit,
+    wilson_interval,
+)
 from qvr.rewrites import HUMAN_VERIFIED, REVIEW_LABELS
 
 
@@ -75,7 +81,7 @@ def test_score_audit_by_hand():
     # the human agrees with the analysis everywhere except two kept rewrites and one dropped rewrite
     flips = {k["rewrite_id"] for k in key if k["meaning_preserved_in_analysis"] is True}
     flips = set(sorted(flips)[:2])
-    dropped_flip = sorted(k["rewrite_id"] for k in key if k["meaning_preserved_in_analysis"] is False)[0]
+    dropped_flip = min(k["rewrite_id"] for k in key if k["meaning_preserved_in_analysis"] is False)
 
     def human(k):
         valid = bool(k["meaning_preserved_in_analysis"]) ^ (k["rewrite_id"] in flips) ^ (k["rewrite_id"] == dropped_flip)
@@ -124,6 +130,6 @@ def test_apply_human_labels_is_explicit_and_partial():
     assert by_id[first]["previous_review_status"] == next(r for r in recs if r["rewrite_id"] == first)["review_status"]
     untouched = [r for r in new if r["rewrite_id"] not in (first, second)]
     assert all(r["review_status"] != HUMAN_VERIFIED for r in untouched)
-    assert [r for r in recs if r["rewrite_id"] == first][0]["review_status"] != HUMAN_VERIFIED  # input not mutated
+    assert next(r for r in recs if r["rewrite_id"] == first)["review_status"] != HUMAN_VERIFIED  # input not mutated
     with pytest.raises(ValueError):
         apply_human_labels([r for r in recs if r["rewrite_id"] != first], rows, key, annotator="A")

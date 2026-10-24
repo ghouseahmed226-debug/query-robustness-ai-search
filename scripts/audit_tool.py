@@ -23,8 +23,16 @@ import argparse
 import json
 from pathlib import Path
 
-from qvr.audit import (BLIND_FIELDS, KEY_FIELDS, apply_human_labels, audit_markdown, make_blind_sheet, read_csv_rows,
-                       score_audit, write_csv_rows)
+from qvr.audit import (
+    BLIND_FIELDS,
+    KEY_FIELDS,
+    apply_human_labels,
+    audit_markdown,
+    make_blind_sheet,
+    read_csv_rows,
+    score_audit,
+    write_csv_rows,
+)
 from qvr.rewrites import read_jsonl, write_jsonl
 
 

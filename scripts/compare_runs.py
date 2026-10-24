@@ -94,9 +94,9 @@ def main(argv=None) -> int:
         r = compare_rankings(path, other)
         ok &= r["same_keys"] and r["different_order"] == 0
         lines.append(f"| {path.name.split('.')[0]} | {r['lists']} | {r['different_order']} | {r['max_abs_score_diff']:.2e} | {r['max_rel_score_diff']:.2e} |")
-    lines += ["", f"**Overall: {'the re-run reproduces the shipped per-query results and ranking order' if ok else 'DIFFERENCES FOUND'}.** "
+    lines += ["", (f"**Overall: {'the re-run reproduces the shipped per-query results and ranking order' if ok else 'DIFFERENCES FOUND'}.** "
               "Differences in stored scores of the order of 1e-7 are floating-point differences between library versions (BLAS, SVD); "
-              "they do not change any ranking here."]
+              "they do not change any ranking here.")]
     text = "\n".join(lines) + "\n"
     print(text)
     if args.out:

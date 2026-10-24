@@ -1,7 +1,7 @@
 import pytest
+from synthetic import HashingEncoder, build_collection, make_rewrites
 
 from qvr.run import RunConfig, run_experiment
-from synthetic import HashingEncoder, build_collection, make_rewrites
 
 
 @pytest.fixture(scope="session")

@@ -2,15 +2,15 @@ import argparse
 import json
 import platform
 import sys
-from pathlib import Path
 from collections import defaultdict
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
 from beir import util
 from beir.datasets.data_loader import GenericDataLoader
-from beir.retrieval.search.lexical import BM25Search
 from beir.retrieval.evaluation import EvaluateRetrieval
+from beir.retrieval.search.lexical import BM25Search
 
 
 def load_rewrites(path):

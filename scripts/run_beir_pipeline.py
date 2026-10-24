@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python
+#!/usr/bin/env python
 """End-to-end BEIR experiment runner.
 
 Orchestrates the full pipeline for one or more BEIR datasets:
@@ -83,7 +83,7 @@ def run(cmd: list[str], label: str, check: bool = True) -> int:
     print(f"  {label}")
     print(f"  $ {' '.join(str(c) for c in cmd)}")
     print(f"{'='*70}")
-    result = subprocess.run(cmd, cwd=str(ROOT))
+    result = subprocess.run(cmd, cwd=str(ROOT), check=False)
     if check and result.returncode != 0:
         print(f"\nERROR: step '{label}' failed with exit code {result.returncode}", file=sys.stderr)
         sys.exit(result.returncode)
@@ -252,11 +252,11 @@ def main(argv=None) -> int:
                 print(f"  PAUSE: Human annotation needed for {dataset}")
                 print(f"  Give annotators ONLY the files in: {packet_dir}")
                 print(f"  Do NOT share the key: {key_out}")
-                print(f"  When done, re-run with --steps merge experiment analysis")
+                print("  When done, re-run with --steps merge experiment analysis")
                 print("!"*70)
                 print("\n  (use --skip-human-review to proceed with llm_reviewed status instead)")
                 if len(args.datasets) > 1:
-                    print(f"  Continuing to next dataset …")
+                    print("  Continuing to next dataset …")
                 continue
 
         # ── 6. Author recheck (word-order) ────────────────────────────────────
@@ -272,7 +272,7 @@ def main(argv=None) -> int:
             label_files = sorted(packet_dir.glob("labels_*.jsonl")) if packet_dir.exists() else []
             if not label_files and not args.skip_human_review:
                 print(f"\n  [SKIP] merge for {dataset}: no label files found in {packet_dir}")
-                print(f"         Run annotation first, then re-run with --steps merge experiment analysis")
+                print("         Run annotation first, then re-run with --steps merge experiment analysis")
                 continue
             if not label_files and args.skip_human_review:
                 # use auto only

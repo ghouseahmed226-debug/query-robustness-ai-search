@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python
+#!/usr/bin/env python
 """Generate query rewrites for a BEIR dataset using an LLM (OpenAI-compatible API).
 
 Produces a JSONL file with one line per judged query containing:
@@ -42,8 +42,8 @@ import argparse
 import json
 import sys
 import time
-from pathlib import Path
 from datetime import datetime, timezone
+from pathlib import Path
 
 from qvr.data import load_beir
 
@@ -243,7 +243,7 @@ def main(argv=None) -> int:
     # ── draft protocol note ───────────────────────────────────────────────────
     print("── draft protocol entry (paste into docs/LLM_REWRITE_PROTOCOL.md) ──")
     print(f"""
-## BEIR rewrite run: {coll.name} ({datetime.now().strftime('%Y-%m-%d')})
+## BEIR rewrite run: {coll.name} ({datetime.now(timezone.utc).strftime('%Y-%m-%d')})
 
 - Model: {args.model}
 - Temperature: {args.temperature}
@@ -283,7 +283,7 @@ def main(argv=None) -> int:
                 )
                 total_prompt_tokens += usage.get("prompt_tokens", 0)
                 total_completion_tokens += usage.get("completion_tokens", 0)
-            except Exception as exc:
+            except Exception as exc:  # noqa: BLE001
                 print(f"FAILED: {exc}", file=sys.stderr)
                 log_f.write(json.dumps({"qid": qid, "query": query,
                                         "error": str(exc), "status": "api_error"}) + "\n")
@@ -314,7 +314,7 @@ def main(argv=None) -> int:
                 time.sleep(args.batch_delay)
 
     # ── summary ───────────────────────────────────────────────────────────────
-    print(f"\n── done ──────────────────────────────────────────────────────────")
+    print("\n── done ──────────────────────────────────────────────────────────")
     print(f"  ok:        {n_ok}")
     print(f"  failed:    {n_fail}")
     print(f"  tokens:    ~{total_prompt_tokens:,} prompt + ~{total_completion_tokens:,} completion")

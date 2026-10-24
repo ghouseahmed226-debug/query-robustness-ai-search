@@ -1,12 +1,22 @@
 import json
-from pathlib import Path
+import random
 
 import pytest
 
-from qvr.rewrites import (NLTK_ENGLISH_STOPWORDS, QWERTY_NEIGHBORS, audit_sample, generate_automatic, load_rewrites,
-                          merge_reviews, neighb_char_swap, qwerty_char_sub, random_char_sub, random_order_swap,
-                          remove_stopwords, swap_touches_only_function_words)
-import random
+from qvr.rewrites import (
+    NLTK_ENGLISH_STOPWORDS,
+    QWERTY_NEIGHBORS,
+    audit_sample,
+    generate_automatic,
+    load_rewrites,
+    merge_reviews,
+    neighb_char_swap,
+    qwerty_char_sub,
+    random_char_sub,
+    random_order_swap,
+    remove_stopwords,
+    swap_touches_only_function_words,
+)
 
 QUERIES = {
     "1": "measurement of dielectric constant of liquids by the use of microwave techniques",
@@ -46,7 +56,7 @@ def test_typo_generators_edit_exactly_one_long_word(seed):
         out = qwerty_char_sub(q, rng)
         (x, y), = diff_tokens(q, out)
         assert len(x) >= 4 and hamming(x, y) == 1
-        pos = [i for i, (a, b) in enumerate(zip(x, y)) if a != b][0]
+        pos = next(i for i, (a, b) in enumerate(zip(x, y)) if a != b)
         assert y[pos] in QWERTY_NEIGHBORS[x[pos]]
 
 

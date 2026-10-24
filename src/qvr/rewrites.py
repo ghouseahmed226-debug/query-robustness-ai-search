@@ -181,8 +181,7 @@ def read_jsonl(path) -> list[dict]:
 
 def write_jsonl(path, records) -> None:
     with open(path, "w", encoding="utf-8") as f:
-        for r in records:
-            f.write(json.dumps(r, ensure_ascii=False) + "\n")
+        f.writelines(json.dumps(r, ensure_ascii=False) + "\n" for r in records)
 
 
 def load_rewrites(path, allowed_statuses=(HUMAN_VERIFIED,)):

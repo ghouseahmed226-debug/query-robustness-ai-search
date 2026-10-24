@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python
+#!/usr/bin/env python
 """Download and verify one or more BEIR datasets.
 
 Downloads the standard .zip from the UKP TU-Darmstadt mirror, extracts it,
@@ -125,11 +125,11 @@ def fetch_one(name: str, out_root: Path) -> dict:
         print(f"  licence: {info['licence']}")
         print(f"  note:    {info['note']}")
         data = download_with_progress(url, name)
-        print(f"  extracting …", end=" ", flush=True)
+        print("  extracting …", end=" ", flush=True)
         with zipfile.ZipFile(io.BytesIO(data)) as zf:
             # BEIR zips have a top-level directory whose name matches the dataset
             members = zf.namelist()
-            top = members[0].split("/")[0]
+            members[0].split("/")[0]
             for member in members:
                 # strip the top-level dir so files land in dest/
                 rel = "/".join(member.split("/")[1:])
@@ -171,7 +171,7 @@ def main(argv=None) -> int:
     for name in args.datasets:
         try:
             results.append(fetch_one(name, out_root))
-        except Exception as exc:
+        except Exception as exc:  # noqa: BLE001
             print(f"[{name}] FAILED: {exc}", file=sys.stderr)
             results.append({"name": name, "status": "error", "error": str(exc)})
 
