@@ -20,6 +20,11 @@ dependencies = [
 dense = ["sentence-transformers>=2.7"]
 plots = ["matplotlib>=3.7"]
 test = ["pytest", "pytrec_eval-terrier", "ranx", "bm25s", "rbo"]
+beir = [
+  "sentence-transformers>=2.7",
+  "openai>=1.0",
+  "matplotlib>=3.7",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
