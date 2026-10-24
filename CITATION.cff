@@ -1,0 +1,54 @@
+﻿cff-version: 1.2.0
+message: >-
+  If you use this code or the results in your research, please cite
+  this repository using the metadata below. Update the author list,
+  title and DOI once the manuscript is finalised and published.
+type: software
+title: >-
+  Query-variation robustness of first-stage retrieval: a reproducible pilot
+  (Vaswani)
+abstract: >-
+  Measures how BM25, a non-neural LSA retriever and their RRF hybrid respond
+  to meaning-preserving query rewrites (misspelling, paraphrasing, naturality,
+  word order) on the Vaswani/NPL collection, using pre-registered statistical
+  tests and a fully reproducible pipeline.
+authors:
+  - family-names: Ahmed
+    given-names: Ghouse
+    alias: ghouseahmed226-debug
+    # ADD your ORCID: orcid: "https://orcid.org/0000-0000-0000-0000"
+    # ADD your affiliation: affiliation: "Your Institution"
+repository-code: "https://github.com/ghouseahmed226-debug/query-robustness-ai-search"
+url: "https://github.com/ghouseahmed226-debug/query-robustness-ai-search"
+license: MIT
+version: "0.1.0-pilot"
+date-released: "2026-10-24"
+keywords:
+  - information-retrieval
+  - query-robustness
+  - query-variation
+  - BM25
+  - LSA
+  - reciprocal-rank-fusion
+  - BEIR
+  - reproducibility
+  - nDCG
+  - ranking-stability
+identifiers:
+  - type: url
+    value: "https://github.com/ghouseahmed226-debug/query-robustness-ai-search"
+    description: GitHub repository
+# Once you have a DOI (Zenodo or arXiv), add it:
+# - type: doi
+#   value: "10.XXXX/zenodo.XXXXXXX"
+#   description: Zenodo archive DOI
+references:
+  - type: article
+    title: "Calibration of IR Metrics for Evaluation of Noisy IR Output"
+    authors:
+      - family-names: Penha
+        given-names: Gustavo
+    year: 2022
+    conference:
+      name: "ECIR 2022"
+    notes: "Categorisation of query rewrites adopted from this work."

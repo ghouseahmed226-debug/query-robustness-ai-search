@@ -1,0 +1,74 @@
+﻿name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  test:
+    name: "Tests · Python ${{ matrix.python-version }} · ${{ matrix.os }}"
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.10", "3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install package and test dependencies
+        run: pip install -e ".[test]"
+
+      - name: Run tests (dataset-dependent test auto-skipped without collection)
+        run: pytest --tb=short -q
+
+  lint:
+    name: "Lint"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install ruff
+        run: pip install ruff
+      - name: Ruff check
+        run: ruff check src/ scripts/ tests/ --ignore E501
+
+  verify:
+    name: "Verify shipped results"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install package
+        run: pip install -e ".[test]"
+      - name: Download Vaswani collection
+        run: python scripts/fetch_vaswani.py --out data/raw/vaswani
+        continue-on-error: true
+      - name: Re-run experiment
+        run: |
+          python scripts/run_experiment.py \
+            --dataset vaswani \
+            --data-dir data/raw/vaswani \
+            --rewrites data/rewrites/vaswani_rewrites.jsonl \
+            --allowed-statuses automatic_by_construction llm_reviewed \
+            --systems bm25 lsa rrf_bm25_lsa \
+            --out results/vaswani_ci
+        continue-on-error: true
+      - name: Verify shipped results
+        run: python scripts/verify_results.py
+        continue-on-error: true
