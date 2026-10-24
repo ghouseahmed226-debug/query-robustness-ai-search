@@ -1,0 +1,159 @@
+{
+  "qvr_version": "0.1.0",
+  "created_utc": "2026-10-20T06:07:22+00:00",
+  "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+  "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+  "packages": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.1",
+    "snowballstemmer": "3.1.1"
+  },
+  "config": {
+    "systems": [
+      "bm25",
+      "lsa",
+      "rrf_bm25_lsa"
+    ],
+    "top_k": 100,
+    "k_rrf": 60,
+    "bm25_k1": 1.2,
+    "bm25_b": 0.75,
+    "lsa_dim": 300,
+    "lsa_seed": 0,
+    "dense_model": null,
+    "dense_query_prefix": "",
+    "dense_doc_prefix": "",
+    "dense_batch_size": 32,
+    "dense_max_seq_length": null,
+    "max_queries": null,
+    "ignore_identical_ids": false,
+    "discard_identical_rewrites": true,
+    "rbo_p": 0.9,
+    "overlap_k": 10
+  },
+  "systems": {
+    "bm25": {
+      "system": "bm25",
+      "k1": 1.2,
+      "b": 0.75,
+      "n_docs": 11429,
+      "n_terms": 7961,
+      "avgdl": 26.817306850993088,
+      "analyzer": {
+        "tokenizer": "lowercase, accent-stripped, regex [a-z0-9]+",
+        "n_stopwords": 33,
+        "stemmer": "porter (snowballstemmer)"
+      }
+    },
+    "lsa": {
+      "system": "lsa",
+      "kind": "non-neural latent semantic analysis (TF-IDF + truncated SVD)",
+      "n_components_requested": 300,
+      "n_components_used": 300,
+      "seed": 0,
+      "svd_n_iter": 7,
+      "analyzer": {
+        "tokenizer": "lowercase, accent-stripped, regex [a-z0-9]+",
+        "n_stopwords": 33,
+        "stemmer": "porter (snowballstemmer)"
+      },
+      "n_docs": 11429
+    },
+    "rrf_bm25_lsa": {
+      "system": "rrf_bm25_lsa",
+      "kind": "reciprocal rank fusion",
+      "components": [
+        "bm25",
+        "lsa"
+      ],
+      "k": 60,
+      "input_depth": 100,
+      "output_depth": 100
+    }
+  },
+  "collection": {
+    "name": "vaswani",
+    "format": "trec (vaswani_npl)",
+    "n_docs": 11429,
+    "n_queries": 93,
+    "n_qrels_pairs": 2083,
+    "n_queries_with_qrels": 93,
+    "n_queries_with_relevant": 93,
+    "judgment_values": {
+      "1": 2083
+    },
+    "qrels_docs_missing_from_corpus": 0,
+    "queries_lowercased": true,
+    "file_sha256": {
+      "doc-text.trec": "117ae7491647cb9725621bad52969a78307de19b1757852a0a2383659a856d36",
+      "query-text.trec": "fef998db14818f74a22b2fb2be06425d5fb0dbd83ed9841fa0440e0a5477da7b",
+      "qrels": "1b3ed6a43752c7a7becb0dbd1614d662791bb7825b60182fd36be24d480ea447"
+    }
+  },
+  "counts": {
+    "queries_selected": 93,
+    "rewrites_kept": 684,
+    "rewrites_kept_by_category": {
+      "naturality": 173,
+      "paraphrasing": 185,
+      "misspelling": 279,
+      "ordering": 47
+    },
+    "rewrites_kept_by_generator": {
+      "LLM_NaturalQuestion": 92,
+      "LLM_Paraphrase": 93,
+      "LLM_SynonymSwap": 92,
+      "NeighbCharSwap": 93,
+      "QWERTYCharSub": 93,
+      "RandomCharSub": 93,
+      "RemoveStopWords": 81,
+      "RandomOrderSwap": 47
+    },
+    "rewrites_kept_by_status": {
+      "llm_reviewed": 405,
+      "automatic_by_construction": 279
+    },
+    "rewrites_dropped": {
+      "not_meaning_preserved": 50
+    }
+  },
+  "inputs": {
+    "rewrite_file": "data/rewrites/vaswani_rewrites_reviewer_only.jsonl",
+    "rewrite_file_sha256": "7f6dba75f182eb5f090e832b70ab69aca2d69e927a65194f55c5d2bdaabb04e0",
+    "analysis_plan": "/home/claude/qrk/docs/ANALYSIS_PLAN.md",
+    "analysis_plan_sha256": "6d31b030288b1c854fc895cdd19f207717ba67923db996be12aa75dd31fbaf08"
+  },
+  "timings_s": {
+    "bm25": {
+      "index_s": 1.163,
+      "search_s": 0.508
+    },
+    "lsa": {
+      "index_s": 5.05,
+      "search_s": 0.365
+    }
+  },
+  "total_runtime_s": 8.639,
+  "allowed_statuses": [
+    "automatic_by_construction",
+    "llm_reviewed"
+  ],
+  "code_sha256": {
+    "src/qvr/__init__.py": "41957a505d258ca3006a47f543247d00425a3dab3a82cbc43a2ef6aea5b816af",
+    "src/qvr/analysis.py": "23ef870f7c7c8ad3699b8e239c8f23ebe01768204b157eec4b7b23532b5a8639",
+    "src/qvr/bm25.py": "127f92a10ae8c4d8a2260472281d51c499f3a11d6c790adaa57b092a3a2d9248",
+    "src/qvr/data.py": "6d25ea8efbf6848affafe09f8bee78cc59cbb9ab934bc66f1bc1a0dd5060be72",
+    "src/qvr/dense.py": "d8daa003e3b191e84bc473b7d9d0969062871c2cd8f689b6bc33c8b828caf997",
+    "src/qvr/fusion.py": "a73a8aab71b71a8209f8c0e80de4a90661d3185b2374bf64dce5cca9c7a8021a",
+    "src/qvr/metrics.py": "f5f1330956a291acef2b0266d915c42018effdb0b9f5e2475404a2e3d93174f7",
+    "src/qvr/ranking.py": "e67006aaa7b0129f69e6584b921ae0d2f26929e5d830d7a82b32f0db970ed8b9",
+    "src/qvr/rewrites.py": "6d3aaa5662980eb1eb2bf5513429545d6379d46b685e0903cb6c3bbd0be25674",
+    "src/qvr/run.py": "4781a28ab3a75212b22c3e816e308ef39b05435060d795e109b67e5dedb2c3e9",
+    "src/qvr/stability.py": "921de965ae3bb06cd86a7c3936f34daae97eaf36d7e98ff740a928f2a84a7bf7",
+    "src/qvr/stats.py": "d342a5ec07ace68fb4aa8f8b3c629ece577b98ccb2517fa90abf13151f2034fb",
+    "src/qvr/text.py": "41d46455a098479552a7a45c8e4a48bcf2d0a736f9c4592555fd2d8962f722d9"
+  },
+  "command": "scripts/run_experiment.py --dataset vaswani --data-dir data/raw/vaswani --rewrites data/rewrites/vaswani_rewrites_reviewer_only.jsonl --allowed-statuses automatic_by_construction llm_reviewed --systems bm25 lsa rrf_bm25_lsa --out results/vaswani_pilot_reviewer_only"
+}

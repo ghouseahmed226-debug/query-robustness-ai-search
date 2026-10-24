@@ -1,0 +1,1 @@
+{"rewrite_id": "69__RemoveStopWords", "author_label": "not_equivalent", "note": "removing 'off' breaks the compound 'cut off' (query becomes 'variable cut slope')"}

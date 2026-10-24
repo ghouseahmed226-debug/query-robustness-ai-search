@@ -1,0 +1,162 @@
+{"pair_id": "p0001", "label": "equivalent", "note": ""}
+{"pair_id": "p0002", "label": "equivalent", "note": ""}
+{"pair_id": "p0003", "label": "equivalent", "note": ""}
+{"pair_id": "p0004", "label": "different", "note": "Dielectric constant split; 'use' and 'dielectric' displaced, meaning garbled."}
+{"pair_id": "p0005", "label": "equivalent", "note": ""}
+{"pair_id": "p0006", "label": "different", "note": "Spherical harmonic analysis broken; 'spherical' now modifies magnetic field."}
+{"pair_id": "p0007", "label": "equivalent", "note": ""}
+{"pair_id": "p0008", "label": "equivalent", "note": ""}
+{"pair_id": "p0009", "label": "equivalent", "note": ""}
+{"pair_id": "p0010", "label": "equivalent", "note": ""}
+{"pair_id": "p0011", "label": "different", "note": "'High frequency' split; 'high' now attaches to 'theoretical treatment'."}
+{"pair_id": "p0012", "label": "equivalent", "note": ""}
+{"pair_id": "p0013", "label": "different", "note": "'Nonlinear' moved off 'elements' onto 'connected'; 'in' displaced."}
+{"pair_id": "p0014", "label": "equivalent", "note": ""}
+{"pair_id": "p0015", "label": "equivalent", "note": ""}
+{"pair_id": "p0016", "label": "equivalent", "note": ""}
+{"pair_id": "p0017", "label": "equivalent", "note": ""}
+{"pair_id": "p0018", "label": "equivalent", "note": ""}
+{"pair_id": "p0019", "label": "equivalent", "note": ""}
+{"pair_id": "p0020", "label": "equivalent", "note": ""}
+{"pair_id": "p0021", "label": "equivalent", "note": ""}
+{"pair_id": "p0022", "label": "equivalent", "note": ""}
+{"pair_id": "p0023", "label": "narrower", "note": "Drops 'or other'; restricts to printed-circuit miniaturization ideas."}
+{"pair_id": "p0024", "label": "equivalent", "note": ""}
+{"pair_id": "p0025", "label": "equivalent", "note": ""}
+{"pair_id": "p0026", "label": "different", "note": "'Atmosphere' and 'use' swapped; 'upper atmosphere' lost, meaning changed."}
+{"pair_id": "p0027", "label": "equivalent", "note": ""}
+{"pair_id": "p0028", "label": "equivalent", "note": ""}
+{"pair_id": "p0029", "label": "different", "note": "'Experiments' and 'aurora' swapped; now reads model aurora in experiments."}
+{"pair_id": "p0030", "label": "equivalent", "note": ""}
+{"pair_id": "p0031", "label": "different", "note": "'Simultaneous' moved onto lightning discharges; 'and' displaced."}
+{"pair_id": "p0032", "label": "equivalent", "note": ""}
+{"pair_id": "p0033", "label": "equivalent", "note": ""}
+{"pair_id": "p0034", "label": "different", "note": "'Shift registers' broken; 'as required' displaced, reads differently."}
+{"pair_id": "p0035", "label": "equivalent", "note": ""}
+{"pair_id": "p0036", "label": "equivalent", "note": ""}
+{"pair_id": "p0037", "label": "equivalent", "note": ""}
+{"pair_id": "p0038", "label": "equivalent", "note": ""}
+{"pair_id": "p0039", "label": "equivalent", "note": ""}
+{"pair_id": "p0040", "label": "equivalent", "note": ""}
+{"pair_id": "p0041", "label": "equivalent", "note": ""}
+{"pair_id": "p0042", "label": "equivalent", "note": ""}
+{"pair_id": "p0043", "label": "equivalent", "note": ""}
+{"pair_id": "p0044", "label": "equivalent", "note": ""}
+{"pair_id": "p0045", "label": "equivalent", "note": ""}
+{"pair_id": "p0046", "label": "equivalent", "note": ""}
+{"pair_id": "p0047", "label": "narrower", "note": "Asks how drifts were measured (method) rather than their measurements."}
+{"pair_id": "p0048", "label": "equivalent", "note": ""}
+{"pair_id": "p0049", "label": "equivalent", "note": ""}
+{"pair_id": "p0050", "label": "equivalent", "note": ""}
+{"pair_id": "p0051", "label": "equivalent", "note": ""}
+{"pair_id": "p0052", "label": "equivalent", "note": ""}
+{"pair_id": "p0053", "label": "equivalent", "note": ""}
+{"pair_id": "p0054", "label": "equivalent", "note": ""}
+{"pair_id": "p0055", "label": "equivalent", "note": ""}
+{"pair_id": "p0056", "label": "equivalent", "note": ""}
+{"pair_id": "p0057", "label": "equivalent", "note": ""}
+{"pair_id": "p0058", "label": "equivalent", "note": ""}
+{"pair_id": "p0059", "label": "equivalent", "note": ""}
+{"pair_id": "p0060", "label": "different", "note": "'Plasma' and 'shock' swapped: shock temperatures, plasma waves."}
+{"pair_id": "p0061", "label": "equivalent", "note": ""}
+{"pair_id": "p0062", "label": "different", "note": "'Current' and 'magnetic' swapped: magnetic systems, current storms."}
+{"pair_id": "p0063", "label": "equivalent", "note": ""}
+{"pair_id": "p0064", "label": "equivalent", "note": ""}
+{"pair_id": "p0065", "label": "equivalent", "note": ""}
+{"pair_id": "p0066", "label": "equivalent", "note": ""}
+{"pair_id": "p0067", "label": "equivalent", "note": ""}
+{"pair_id": "p0068", "label": "equivalent", "note": ""}
+{"pair_id": "p0069", "label": "equivalent", "note": ""}
+{"pair_id": "p0070", "label": "equivalent", "note": ""}
+{"pair_id": "p0071", "label": "equivalent", "note": ""}
+{"pair_id": "p0072", "label": "equivalent", "note": ""}
+{"pair_id": "p0073", "label": "equivalent", "note": ""}
+{"pair_id": "p0074", "label": "equivalent", "note": ""}
+{"pair_id": "p0075", "label": "equivalent", "note": ""}
+{"pair_id": "p0076", "label": "equivalent", "note": ""}
+{"pair_id": "p0077", "label": "different", "note": "'Logical function' split; 'logical' now modifies 'methods'."}
+{"pair_id": "p0078", "label": "equivalent", "note": ""}
+{"pair_id": "p0079", "label": "equivalent", "note": ""}
+{"pair_id": "p0080", "label": "equivalent", "note": ""}
+{"pair_id": "p0081", "label": "equivalent", "note": ""}
+{"pair_id": "p0082", "label": "equivalent", "note": ""}
+{"pair_id": "p0083", "label": "equivalent", "note": ""}
+{"pair_id": "p0084", "label": "equivalent", "note": ""}
+{"pair_id": "p0085", "label": "equivalent", "note": ""}
+{"pair_id": "p0086", "label": "equivalent", "note": ""}
+{"pair_id": "p0087", "label": "equivalent", "note": ""}
+{"pair_id": "p0088", "label": "equivalent", "note": ""}
+{"pair_id": "p0089", "label": "equivalent", "note": ""}
+{"pair_id": "p0090", "label": "different", "note": "Garbled; drops 'before' and 'or very' qualifiers."}
+{"pair_id": "p0091", "label": "equivalent", "note": ""}
+{"pair_id": "p0092", "label": "equivalent", "note": ""}
+{"pair_id": "p0093", "label": "different", "note": "'Cavity' and 'effect' swapped; resonator becomes effect resonator."}
+{"pair_id": "p0094", "label": "equivalent", "note": ""}
+{"pair_id": "p0095", "label": "equivalent", "note": ""}
+{"pair_id": "p0096", "label": "equivalent", "note": ""}
+{"pair_id": "p0097", "label": "equivalent", "note": ""}
+{"pair_id": "p0098", "label": "equivalent", "note": ""}
+{"pair_id": "p0099", "label": "different", "note": "'Band pass' split; 'band' moved to computers, 'of of' duplicated."}
+{"pair_id": "p0100", "label": "equivalent", "note": ""}
+{"pair_id": "p0101", "label": "equivalent", "note": ""}
+{"pair_id": "p0102", "label": "equivalent", "note": ""}
+{"pair_id": "p0103", "label": "equivalent", "note": ""}
+{"pair_id": "p0104", "label": "equivalent", "note": ""}
+{"pair_id": "p0105", "label": "equivalent", "note": ""}
+{"pair_id": "p0106", "label": "equivalent", "note": ""}
+{"pair_id": "p0107", "label": "equivalent", "note": ""}
+{"pair_id": "p0108", "label": "equivalent", "note": ""}
+{"pair_id": "p0109", "label": "equivalent", "note": ""}
+{"pair_id": "p0110", "label": "equivalent", "note": ""}
+{"pair_id": "p0111", "label": "different", "note": "'Programs' and 'computers' swapped: testing programs, not computers."}
+{"pair_id": "p0112", "label": "equivalent", "note": ""}
+{"pair_id": "p0113", "label": "equivalent", "note": ""}
+{"pair_id": "p0114", "label": "different", "note": "'Cut off' split; 'with' displaced, so 'cut-off slope' is lost."}
+{"pair_id": "p0115", "label": "equivalent", "note": ""}
+{"pair_id": "p0116", "label": "equivalent", "note": ""}
+{"pair_id": "p0117", "label": "equivalent", "note": ""}
+{"pair_id": "p0118", "label": "equivalent", "note": ""}
+{"pair_id": "p0119", "label": "equivalent", "note": ""}
+{"pair_id": "p0120", "label": "different", "note": "'Low pass' broken; 'low' and 'pass' attach to different words."}
+{"pair_id": "p0121", "label": "equivalent", "note": ""}
+{"pair_id": "p0122", "label": "equivalent", "note": ""}
+{"pair_id": "p0123", "label": "equivalent", "note": ""}
+{"pair_id": "p0124", "label": "equivalent", "note": ""}
+{"pair_id": "p0125", "label": "equivalent", "note": ""}
+{"pair_id": "p0126", "label": "equivalent", "note": ""}
+{"pair_id": "p0127", "label": "equivalent", "note": ""}
+{"pair_id": "p0128", "label": "equivalent", "note": ""}
+{"pair_id": "p0129", "label": "equivalent", "note": ""}
+{"pair_id": "p0130", "label": "equivalent", "note": ""}
+{"pair_id": "p0131", "label": "different", "note": "'Circuit diagrams' split; 'diagrams' now attaches to 'performance'."}
+{"pair_id": "p0132", "label": "equivalent", "note": ""}
+{"pair_id": "p0133", "label": "equivalent", "note": ""}
+{"pair_id": "p0134", "label": "equivalent", "note": ""}
+{"pair_id": "p0135", "label": "equivalent", "note": ""}
+{"pair_id": "p0136", "label": "equivalent", "note": ""}
+{"pair_id": "p0137", "label": "equivalent", "note": ""}
+{"pair_id": "p0138", "label": "equivalent", "note": ""}
+{"pair_id": "p0139", "label": "equivalent", "note": ""}
+{"pair_id": "p0140", "label": "different", "note": "'Propagation' and 'corona' swapped; the topic changes."}
+{"pair_id": "p0141", "label": "equivalent", "note": ""}
+{"pair_id": "p0142", "label": "equivalent", "note": ""}
+{"pair_id": "p0143", "label": "equivalent", "note": ""}
+{"pair_id": "p0144", "label": "equivalent", "note": ""}
+{"pair_id": "p0145", "label": "equivalent", "note": ""}
+{"pair_id": "p0146", "label": "equivalent", "note": ""}
+{"pair_id": "p0147", "label": "equivalent", "note": ""}
+{"pair_id": "p0148", "label": "equivalent", "note": ""}
+{"pair_id": "p0149", "label": "equivalent", "note": ""}
+{"pair_id": "p0150", "label": "equivalent", "note": ""}
+{"pair_id": "p0151", "label": "equivalent", "note": ""}
+{"pair_id": "p0152", "label": "equivalent", "note": ""}
+{"pair_id": "p0153", "label": "different", "note": "'Band pass' became 'band have'; 'pass data' reads as a verb."}
+{"pair_id": "p0154", "label": "equivalent", "note": ""}
+{"pair_id": "p0155", "label": "equivalent", "note": ""}
+{"pair_id": "p0156", "label": "equivalent", "note": ""}
+{"pair_id": "p0157", "label": "equivalent", "note": ""}
+{"pair_id": "p0158", "label": "equivalent", "note": ""}
+{"pair_id": "p0159", "label": "equivalent", "note": ""}
+{"pair_id": "p0160", "label": "equivalent", "note": ""}
+{"pair_id": "p0161", "label": "equivalent", "note": ""}
+{"pair_id": "p0162", "label": "equivalent", "note": ""}

@@ -1,0 +1,280 @@
+system,qid,query,n_returned,ndcg@10,recall@100,mrr@10
+bm25,1,measurement of dielectric constant of liquids by the use of microwave techniques,100,0.5077181160122074,0.47368421052631576,1.0
+bm25,2,mathematical analysis and design details of waveguide fed microwave radiations,100,0.13886244387355454,0.3333333333333333,0.5
+bm25,3,use of digital computers in the design of band pass filters having given phase and attenuation characteristics,100,0.2835149363066189,0.5757575757575758,0.5
+bm25,4,systems of data coding for information transfer,100,0.7618017901203944,0.8,1.0
+bm25,5,use of programs in engineering testing of computers,100,0.0,0.0,0.0
+bm25,6,number representation in binary machines,100,0.2984900352767555,0.7,1.0
+bm25,7,secondary emission of electrons by positive ion bombardment of the cathode,100,0.5551469705065497,0.7733333333333333,0.5
+bm25,8,measurement of plasma temperatures in arc discharge using shock wave techniques,100,0.6309297535714575,1.0,0.5
+bm25,9,characteristics of the single electrode discharge in the rare gases at low pressures,100,0.6131471927654584,1.0,1.0
+bm25,10,methods of calculating instantaneous power dissipation in reactive circuits,100,0.21726071285222986,0.36363636363636365,0.5
+bm25,11,the effect of oxidation on circuit breaker contacts,100,0.0,1.0,0.0
+bm25,12,temperature independent methods for tuning highly stable high frequency oscillators,100,0.3529461582433962,0.46153846153846156,0.5
+bm25,13,mathematical expressions and graphs for the design of transistorised tuned pass band amplifiers,100,0.5483327772244702,0.4576271186440678,1.0
+bm25,14,synthesis of filters having high attenuation characteristics using a block diagram approach,100,0.611755947233009,0.5,0.5
+bm25,15,voltage current relationships in networks of nonlinear elements connected in parallel,100,0.2973694836145356,0.46875,0.5
+bm25,16,methods of approximating the frequency phase relationships for resistive inductive and resistive capacitive circuits,100,0.11004588314904008,0.2692307692307692,0.3333333333333333
+bm25,17,observations of rapid fluctuations in the earths magnetic field and their relation to the propagation of hydromagnetic waves in the exosphere,100,0.7191184989488184,0.782608695652174,1.0
+bm25,18,diurnal variations of fluctuations in the earths magnetic field,100,0.2614432242450501,0.5384615384615384,0.3333333333333333
+bm25,19,spherical harmonic analysis of the earths magnetic field,100,0.7859162856301583,0.5833333333333334,1.0
+bm25,20,derivation of the components of the electrical conductivity in the upper atmosphere,100,0.4537425745411855,0.34782608695652173,1.0
+bm25,21,the effects of solar flares on the absorption of cosmic radio noise in the ionosphere,100,0.8512360941594272,0.72,1.0
+bm25,22,determination of the current systems in the upper atmosphere during magnetic storms,100,0.9266360779006398,0.47692307692307695,1.0
+bm25,23,observations of the sun during eclipses giving the distribution of sources on the disc in the microwave range,100,0.4537425745411855,0.65,1.0
+bm25,24,observations of the sun using radio interferometers,100,0.33013764944712026,0.5128205128205128,1.0
+bm25,25,equations governing the propagation of electromagnetic and hydromagnetic waves in the solar corona,100,0.21222636597291458,0.2876712328767123,0.5
+bm25,26,estimates of the density of ionization and temperature in the solar corona,100,0.7917267193679838,0.6415094339622641,1.0
+bm25,27,please send abstracts on the source spectra of lightning discharges,100,0.4230293752959408,0.6785714285714286,0.3333333333333333
+bm25,28,the effect of small distortions in the surface of a cavity resonator,100,0.5082253701026133,0.75,1.0
+bm25,29,the determination of the orbits of individual meteors by radio methods,100,0.4690000933206748,0.8181818181818182,1.0
+bm25,30,the determination of ion masses in the ionosphere by the study of back scattered radio waves,100,0.3727892582642587,1.0,1.0
+bm25,31,theoretical studies of the source of high frequency radio waves emitted from the planet jupiter,100,0.4662774717636409,0.9090909090909091,1.0
+bm25,32,simultaneous observations of whistlers and lightning discharges,100,0.6994739030813919,0.8461538461538461,1.0
+bm25,33,variations in the height of reflection of low or very low frequency radio waves in the period before ground sunrise,100,0.19325072687364162,0.375,0.25
+bm25,34,the use of ionospheric cross modulation in the determination of ionospheric electron densities and collision frequencies,100,0.14829723057014912,0.4444444444444444,0.5
+bm25,35,measurements of ionospheric drifts near the equator,100,0.5965377185773227,0.6333333333333333,1.0
+bm25,36,the use of analogue computers in upper atmosphere theory,100,0.12647135138382856,0.375,0.3333333333333333
+bm25,37,the use of lunar radio reflections in investigations of the nature of the moons surface,100,0.8268133666517739,0.84,1.0
+bm25,38,what references on comparison between ground level and high altitude balloon cosmic ray results,100,0.6149518506608846,0.9166666666666666,1.0
+bm25,39,what references on model experiments in aurora,100,0.48522855511632257,0.6,1.0
+bm25,40,what references on integral spectrum of primary cosmic rays,100,0.7728378251807518,0.7931034482758621,1.0
+bm25,41,ferromagnetic techniques for computer stores,100,0.34051969290975714,0.2619047619047619,0.3333333333333333
+bm25,42,solution of differential equations by computer,100,0.9216017310213246,0.8333333333333334,1.0
+bm25,43,efficiency of digital computers versus analogue computers in the solution of boundary value problems,100,0.5306972923267993,0.7142857142857143,1.0
+bm25,44,methods of error checking in digital computers,100,0.6949410105562137,0.875,1.0
+bm25,45,methods of producing minimal nets given a logical function in canonical form,100,0.6739577727076379,0.8,1.0
+bm25,46,arithmetic units as required in a digital computer including shift registers serial and parallel adder,100,0.9305687780632227,0.6170212765957447,1.0
+bm25,47,information on the design of low drift transistor amplifiers,100,0.5587148206871071,0.78125,0.5
+bm25,48,information on high current transistor switches,100,0.6713860725233041,1.0,1.0
+bm25,49,information on design of time division multiplexing circuits,100,0.6724559848537955,0.7142857142857143,1.0
+bm25,50,details of available low voltage capacitors,100,0.0,1.0,0.0
+bm25,51,design of direct coupled flip flops to function with the maximum variations in the values of the circuit components,100,0.6618313225363274,0.625,1.0
+bm25,52,please supply information on the performance of typical magnetic film memory systems with circuit diagrams,100,0.5769706247040591,0.56,1.0
+bm25,53,i would like details of the work which has been done to extend the frequency range of magnetic amplifiers,100,0.06625422345438903,0.29411764705882354,0.1111111111111111
+bm25,54,i would like information on the range of static relays suitable for use at high switching rates,100,0.5473983622993501,0.8,1.0
+bm25,55,i am interested in circuitry capable of generating extremely narrow pulses,100,0.3187939258847263,0.46153846153846156,0.5
+bm25,56,please supply information on the theory and use of parametric amplifiers,100,0.6618313225363274,0.46153846153846156,1.0
+bm25,57,the synthesis of networks with given sampled data transfer functions,100,0.0,0.7,0.0
+bm25,58,the theory of stability in relation to control systems with relay elements,100,0.06943122193677727,0.4,0.125
+bm25,59,the use of digital computers to obtain power spectral analysis of numerical data,100,0.0,0.0,0.0
+bm25,60,printed circuit design for a random pulse generator of low frequency,100,0.7653606369886217,1.0,1.0
+bm25,61,references on electric field theories of the aurora,100,0.6122496142821665,0.4523809523809524,1.0
+bm25,62,fast transistor counters,100,0.7065632165480471,0.7142857142857143,1.0
+bm25,63,low pass lattice filters,100,0.7917267193679838,0.8,1.0
+bm25,64,similarities between the diffraction theory of electromagnetic waves and that of electron streams,100,0.0,0.2727272727272727,0.0
+bm25,65,the use of complex variables in the theory of communication networks,100,0.5855700749881525,0.75,1.0
+bm25,66,the behaviour of a beam of charged particles in the presence of plane conductors,100,0.0,0.25,0.0
+bm25,67,predicting the paths of electrons moving in a varying magnetic field,100,0.15139734109601002,0.3333333333333333,0.2
+bm25,68,active constant voltage transformer for signal distribution,100,0.42838543210841196,0.3333333333333333,1.0
+bm25,69,active audio frequency filter with variable cut off slope,100,0.6059848036189865,0.7857142857142857,1.0
+bm25,70,variable ultra high frequency attenuators,100,0.14606834984270645,0.8,0.25
+bm25,71,faulty operation of feedback time bases,100,0.5834330535576521,0.5238095238095238,1.0
+bm25,72,variable capacitance amplifiers,100,0.7859162856301583,0.6875,1.0
+bm25,73,transistor sweep generators,100,0.7058075148678525,0.7777777777777778,1.0
+bm25,74,advantages of parametric amplifiers,100,0.5473983622993501,0.46875,1.0
+bm25,75,optimising linear networks,100,0.9216017310213246,0.8484848484848485,1.0
+bm25,76,transistor phase splitting circuits,100,0.3174692397007401,0.7777777777777778,0.5
+bm25,77,please supply information pertinent to the use of surface pretreatment to prevent secondary emission effects in valves,100,0.49828993591603105,0.875,1.0
+bm25,78,i wish to have data about the design of mechanical band pass filters for good pass characteristics,100,0.0,0.48,0.0
+bm25,79,mechanisms whereby transmission at high frequencies is affected by weather and time of day,100,0.21222636597291458,0.3103448275862069,0.5
+bm25,80,could you please give me articles about the possibilities of getting rectification using metallic devices,100,0.0,0.07692307692307693,0.0
+bm25,81,i wish to calculate the inductance and loss in coils made using printed circuit or other miniaturization ideas. a suitable article please,100,0.3903800499921017,0.75,1.0
+bm25,82,analysis of nonlinear systems using phase plane techniques,100,0.4422195942380129,0.5454545454545454,1.0
+bm25,83,miniature low noise high gain high impedance amplifiers,100,0.28952298823485745,0.6538461538461539,1.0
+bm25,84,control characteristics of sampling servo systems,100,0.6325414799409711,0.5217391304347826,1.0
+bm25,85,power spectral density distribution obtained using analogue techniques,100,0.0,0.125,0.0
+bm25,86,high stability high input impedance transistorised analogue amplifier,100,0.06362078819895171,0.5,0.1
+bm25,87,electronic specific heat of a superconductor showing a discontinuity at the superconducting critical temperature,100,0.27487633291429087,0.7142857142857143,1.0
+bm25,88,an abstract on the field distribution surrounding a charged thin circular disc resting on an infinite dielectric slab,100,0.06943122193677727,0.4,0.125
+bm25,89,tunnel diode construction and its electrical characteristics explained,100,0.0,0.75,0.0
+bm25,90,electronic density of states at the surface of a semiconductor compared with that at depth,100,0.3882251478215036,0.3793103448275862,0.5
+bm25,91,resistivity of metallic thin films related to surface roughness,100,0.6816808362189437,0.6571428571428571,1.0
+bm25,92,the phenomenon of radiation caused by charged particles moving in varying electric and magnetic fields,100,0.17993148201117176,0.42857142857142855,0.25
+bm25,93,high frequency oscillators using transistors theoretical treatment and practical circuit details,100,0.06362078819895171,0.5217391304347826,0.1
+lsa,1,measurement of dielectric constant of liquids by the use of microwave techniques,100,0.4920062203073637,0.2631578947368421,1.0
+lsa,2,mathematical analysis and design details of waveguide fed microwave radiations,100,0.0,0.06666666666666667,0.0
+lsa,3,use of digital computers in the design of band pass filters having given phase and attenuation characteristics,100,0.3430184917061137,0.5757575757575758,0.3333333333333333
+lsa,4,systems of data coding for information transfer,100,0.1208113026994942,1.0,0.16666666666666666
+lsa,5,use of programs in engineering testing of computers,100,0.0,0.0,0.0
+lsa,6,number representation in binary machines,100,0.14279514403613733,0.6,0.14285714285714285
+lsa,7,secondary emission of electrons by positive ion bombardment of the cathode,100,0.5847192329112587,0.7333333333333333,0.5
+lsa,8,measurement of plasma temperatures in arc discharge using shock wave techniques,100,0.0,1.0,0.0
+lsa,9,characteristics of the single electrode discharge in the rare gases at low pressures,100,0.6131471927654584,1.0,1.0
+lsa,10,methods of calculating instantaneous power dissipation in reactive circuits,100,0.09478836436955078,0.18181818181818182,0.25
+lsa,11,the effect of oxidation on circuit breaker contacts,100,0.0,1.0,0.0
+lsa,12,temperature independent methods for tuning highly stable high frequency oscillators,100,0.36792125721353275,0.41025641025641024,1.0
+lsa,13,mathematical expressions and graphs for the design of transistorised tuned pass band amplifiers,100,0.5478527392247046,0.4576271186440678,1.0
+lsa,14,synthesis of filters having high attenuation characteristics using a block diagram approach,100,0.4920062203073637,0.42857142857142855,1.0
+lsa,15,voltage current relationships in networks of nonlinear elements connected in parallel,100,0.0,0.4375,0.0
+lsa,16,methods of approximating the frequency phase relationships for resistive inductive and resistive capacitive circuits,100,0.07336392209936005,0.19230769230769232,0.14285714285714285
+lsa,17,observations of rapid fluctuations in the earths magnetic field and their relation to the propagation of hydromagnetic waves in the exosphere,100,0.5271064966405454,0.43478260869565216,1.0
+lsa,18,diurnal variations of fluctuations in the earths magnetic field,100,0.1610425878239398,0.46153846153846156,0.25
+lsa,19,spherical harmonic analysis of the earths magnetic field,100,0.18340980524840012,0.3333333333333333,0.3333333333333333
+lsa,20,derivation of the components of the electrical conductivity in the upper atmosphere,100,0.3589542101716347,0.391304347826087,1.0
+lsa,21,the effects of solar flares on the absorption of cosmic radio noise in the ionosphere,100,0.8318477135310891,0.68,1.0
+lsa,22,determination of the current systems in the upper atmosphere during magnetic storms,100,0.3031595321740454,0.4153846153846154,0.2
+lsa,23,observations of the sun during eclipses giving the distribution of sources on the disc in the microwave range,100,0.4530643748551537,0.65,1.0
+lsa,24,observations of the sun using radio interferometers,100,0.07336392209936005,0.4358974358974359,0.14285714285714285
+lsa,25,equations governing the propagation of electromagnetic and hydromagnetic waves in the solar corona,100,0.0,0.0410958904109589,0.0
+lsa,26,estimates of the density of ionization and temperature in the solar corona,100,0.5326208815196265,0.2830188679245283,1.0
+lsa,27,please send abstracts on the source spectra of lightning discharges,100,0.24618570546556076,0.5,0.25
+lsa,28,the effect of small distortions in the surface of a cavity resonator,100,0.4597307900205735,0.75,1.0
+lsa,29,the determination of the orbits of individual meteors by radio methods,100,0.47479014188018454,0.8181818181818182,1.0
+lsa,30,the determination of ion masses in the ionosphere by the study of back scattered radio waves,100,0.23535109180711325,1.0,0.3333333333333333
+lsa,31,theoretical studies of the source of high frequency radio waves emitted from the planet jupiter,100,0.0,0.2727272727272727,0.0
+lsa,32,simultaneous observations of whistlers and lightning discharges,100,0.5541432109622958,0.9230769230769231,1.0
+lsa,33,variations in the height of reflection of low or very low frequency radio waves in the period before ground sunrise,100,0.0901000086523677,0.25,0.16666666666666666
+lsa,34,the use of ionospheric cross modulation in the determination of ionospheric electron densities and collision frequencies,100,0.14829723057014912,0.2222222222222222,0.5
+lsa,35,measurements of ionospheric drifts near the equator,100,0.49118023727106,0.5666666666666667,1.0
+lsa,36,the use of analogue computers in upper atmosphere theory,100,0.0,0.375,0.0
+lsa,37,the use of lunar radio reflections in investigations of the nature of the moons surface,100,0.7353797772725617,0.64,1.0
+lsa,38,what references on comparison between ground level and high altitude balloon cosmic ray results,100,0.5894280199323518,0.8333333333333334,1.0
+lsa,39,what references on model experiments in aurora,100,0.3391602052736161,0.4,1.0
+lsa,40,what references on integral spectrum of primary cosmic rays,100,0.6235540477207573,0.7241379310344828,1.0
+lsa,41,ferromagnetic techniques for computer stores,100,0.06943122193677727,0.09523809523809523,0.125
+lsa,42,solution of differential equations by computer,100,0.7100226348397881,0.7777777777777778,1.0
+lsa,43,efficiency of digital computers versus analogue computers in the solution of boundary value problems,100,0.37138978232323294,0.5714285714285714,0.5
+lsa,44,methods of error checking in digital computers,100,0.2529427027676571,0.625,1.0
+lsa,45,methods of producing minimal nets given a logical function in canonical form,100,0.3391602052736161,0.8,1.0
+lsa,46,arithmetic units as required in a digital computer including shift registers serial and parallel adder,100,0.3452783761086436,0.5319148936170213,0.5
+lsa,47,information on the design of low drift transistor amplifiers,100,0.3565964385966262,0.5625,0.3333333333333333
+lsa,48,information on high current transistor switches,100,0.5307212739772434,1.0,0.5
+lsa,49,information on design of time division multiplexing circuits,100,0.0,0.42857142857142855,0.0
+lsa,50,details of available low voltage capacitors,100,0.0,1.0,0.0
+lsa,51,design of direct coupled flip flops to function with the maximum variations in the values of the circuit components,100,0.5684579545875155,0.6875,0.5
+lsa,52,please supply information on the performance of typical magnetic film memory systems with circuit diagrams,100,0.7827392871477701,0.72,1.0
+lsa,53,i would like details of the work which has been done to extend the frequency range of magnetic amplifiers,100,0.2863459897524692,0.23529411764705882,1.0
+lsa,54,i would like information on the range of static relays suitable for use at high switching rates,100,0.21726071285222986,0.4,0.5
+lsa,55,i am interested in circuitry capable of generating extremely narrow pulses,100,0.06362078819895171,0.7692307692307693,0.1
+lsa,56,please supply information on the theory and use of parametric amplifiers,100,0.6581810421830974,0.38461538461538464,1.0
+lsa,57,the synthesis of networks with given sampled data transfer functions,100,0.0,0.4,0.0
+lsa,58,the theory of stability in relation to control systems with relay elements,100,0.07839826897867533,0.3,0.16666666666666666
+lsa,59,the use of digital computers to obtain power spectral analysis of numerical data,100,0.0,0.0,0.0
+lsa,60,printed circuit design for a random pulse generator of low frequency,100,0.1480409554829326,0.6666666666666666,0.125
+lsa,61,references on electric field theories of the aurora,100,0.2984900352767555,0.2857142857142857,1.0
+lsa,62,fast transistor counters,100,0.5326208815196265,0.6666666666666666,1.0
+lsa,63,low pass lattice filters,100,0.7123736502858726,0.6666666666666666,1.0
+lsa,64,similarities between the diffraction theory of electromagnetic waves and that of electron streams,100,0.0,0.3181818181818182,0.0
+lsa,65,the use of complex variables in the theory of communication networks,100,0.19519002499605084,0.5,0.3333333333333333
+lsa,66,the behaviour of a beam of charged particles in the presence of plane conductors,100,0.0,0.125,0.0
+lsa,67,predicting the paths of electrons moving in a varying magnetic field,100,0.21726071285222986,0.3333333333333333,0.5
+lsa,68,active constant voltage transformer for signal distribution,100,0.33013764944712026,0.2727272727272727,1.0
+lsa,69,active audio frequency filter with variable cut off slope,100,0.6652907408280683,0.7857142857142857,1.0
+lsa,70,variable ultra high frequency attenuators,100,0.21398626473452756,0.8,0.5
+lsa,71,faulty operation of feedback time bases,100,0.22009176629808017,0.5238095238095238,1.0
+lsa,72,variable capacitance amplifiers,100,0.2816372027313761,0.53125,0.16666666666666666
+lsa,73,transistor sweep generators,100,0.28371255449703187,0.2777777777777778,1.0
+lsa,74,advantages of parametric amplifiers,100,0.0,0.25,0.0
+lsa,75,optimising linear networks,100,0.9266360779006398,0.6363636363636364,1.0
+lsa,76,transistor phase splitting circuits,100,0.1012286082123002,0.5555555555555556,0.25
+lsa,77,please supply information pertinent to the use of surface pretreatment to prevent secondary emission effects in valves,100,0.6464018466408363,0.8333333333333334,1.0
+lsa,78,i wish to have data about the design of mechanical band pass filters for good pass characteristics,100,0.1487639058405727,0.44,0.2
+lsa,79,mechanisms whereby transmission at high frequencies is affected by weather and time of day,100,0.22009176629808017,0.10344827586206896,1.0
+lsa,80,could you please give me articles about the possibilities of getting rectification using metallic devices,100,0.0,0.15384615384615385,0.0
+lsa,81,i wish to calculate the inductance and loss in coils made using printed circuit or other miniaturization ideas. a suitable article please,100,0.3903800499921017,0.75,1.0
+lsa,82,analysis of nonlinear systems using phase plane techniques,100,0.42520843362602373,0.5909090909090909,1.0
+lsa,83,miniature low noise high gain high impedance amplifiers,100,0.09478836436955078,0.46153846153846156,0.25
+lsa,84,control characteristics of sampling servo systems,100,0.0,0.43478260869565216,0.0
+lsa,85,power spectral density distribution obtained using analogue techniques,100,0.0,0.0,0.0
+lsa,86,high stability high input impedance transistorised analogue amplifier,100,0.0,0.3,0.0
+lsa,87,electronic specific heat of a superconductor showing a discontinuity at the superconducting critical temperature,100,0.0,0.2857142857142857,0.0
+lsa,88,an abstract on the field distribution surrounding a charged thin circular disc resting on an infinite dielectric slab,100,0.0,0.1,0.0
+lsa,89,tunnel diode construction and its electrical characteristics explained,100,0.06625422345438903,0.6666666666666666,0.1111111111111111
+lsa,90,electronic density of states at the surface of a semiconductor compared with that at depth,100,0.4170606134915054,0.3103448275862069,0.5
+lsa,91,resistivity of metallic thin films related to surface roughness,100,0.6683063269107928,0.5142857142857142,1.0
+lsa,92,the phenomenon of radiation caused by charged particles moving in varying electric and magnetic fields,100,0.0,0.42857142857142855,0.0
+lsa,93,high frequency oscillators using transistors theoretical treatment and practical circuit details,100,0.14279514403613733,0.391304347826087,0.14285714285714285
+rrf_bm25_lsa,1,measurement of dielectric constant of liquids by the use of microwave techniques,100,0.4690000933206748,0.3684210526315789,1.0
+rrf_bm25_lsa,2,mathematical analysis and design details of waveguide fed microwave radiations,100,0.0,0.2,0.0
+rrf_bm25_lsa,3,use of digital computers in the design of band pass filters having given phase and attenuation characteristics,100,0.37183505243062814,0.6060606060606061,0.5
+rrf_bm25_lsa,4,systems of data coding for information transfer,100,0.4599715079731103,1.0,1.0
+rrf_bm25_lsa,5,use of programs in engineering testing of computers,100,0.0,0.0,0.0
+rrf_bm25_lsa,6,number representation in binary machines,100,0.31833954895937183,0.6,0.5
+rrf_bm25_lsa,7,secondary emission of electrons by positive ion bombardment of the cathode,100,0.6253338941235216,0.7733333333333333,0.5
+rrf_bm25_lsa,8,measurement of plasma temperatures in arc discharge using shock wave techniques,100,0.43067655807339306,1.0,0.25
+rrf_bm25_lsa,9,characteristics of the single electrode discharge in the rare gases at low pressures,100,0.6131471927654584,1.0,1.0
+rrf_bm25_lsa,10,methods of calculating instantaneous power dissipation in reactive circuits,100,0.13886244387355454,0.36363636363636365,0.5
+rrf_bm25_lsa,11,the effect of oxidation on circuit breaker contacts,100,0.0,1.0,0.0
+rrf_bm25_lsa,12,temperature independent methods for tuning highly stable high frequency oscillators,100,0.36099027181348725,0.41025641025641024,0.5
+rrf_bm25_lsa,13,mathematical expressions and graphs for the design of transistorised tuned pass band amplifiers,100,0.5548010254700118,0.4406779661016949,1.0
+rrf_bm25_lsa,14,synthesis of filters having high attenuation characteristics using a block diagram approach,100,0.6212166613240645,0.44642857142857145,1.0
+rrf_bm25_lsa,15,voltage current relationships in networks of nonlinear elements connected in parallel,100,0.14465249243306436,0.46875,0.16666666666666666
+rrf_bm25_lsa,16,methods of approximating the frequency phase relationships for resistive inductive and resistive capacitive circuits,100,0.09478836436955078,0.2692307692307692,0.25
+rrf_bm25_lsa,17,observations of rapid fluctuations in the earths magnetic field and their relation to the propagation of hydromagnetic waves in the exosphere,100,0.6581810421830974,0.6086956521739131,1.0
+rrf_bm25_lsa,18,diurnal variations of fluctuations in the earths magnetic field,100,0.2578753740644927,0.5384615384615384,0.3333333333333333
+rrf_bm25_lsa,19,spherical harmonic analysis of the earths magnetic field,100,0.3589542101716347,0.625,1.0
+rrf_bm25_lsa,20,derivation of the components of the electrical conductivity in the upper atmosphere,100,0.42520843362602373,0.34782608695652173,1.0
+rrf_bm25_lsa,21,the effects of solar flares on the absorption of cosmic radio noise in the ionosphere,100,0.905211635630449,0.68,1.0
+rrf_bm25_lsa,22,determination of the current systems in the upper atmosphere during magnetic storms,100,0.9363792118010481,0.4461538461538462,1.0
+rrf_bm25_lsa,23,observations of the sun during eclipses giving the distribution of sources on the disc in the microwave range,100,0.5135285497500329,0.7,1.0
+rrf_bm25_lsa,24,observations of the sun using radio interferometers,100,0.199306233590118,0.4358974358974359,0.125
+rrf_bm25_lsa,25,equations governing the propagation of electromagnetic and hydromagnetic waves in the solar corona,100,0.0,0.1643835616438356,0.0
+rrf_bm25_lsa,26,estimates of the density of ionization and temperature in the solar corona,100,0.7564477297898764,0.5471698113207547,1.0
+rrf_bm25_lsa,27,please send abstracts on the source spectra of lightning discharges,100,0.615406227586239,0.4642857142857143,1.0
+rrf_bm25_lsa,28,the effect of small distortions in the surface of a cavity resonator,100,0.5317737426002289,0.75,1.0
+rrf_bm25_lsa,29,the determination of the orbits of individual meteors by radio methods,100,0.5036067026046991,0.8181818181818182,1.0
+rrf_bm25_lsa,30,the determination of ion masses in the ionosphere by the study of back scattered radio waves,100,0.3975796519395046,1.0,0.5
+rrf_bm25_lsa,31,theoretical studies of the source of high frequency radio waves emitted from the planet jupiter,100,0.13886244387355454,0.8181818181818182,0.5
+rrf_bm25_lsa,32,simultaneous observations of whistlers and lightning discharges,100,0.7065836017263628,0.9230769230769231,1.0
+rrf_bm25_lsa,33,variations in the height of reflection of low or very low frequency radio waves in the period before ground sunrise,100,0.12647135138382856,0.375,0.3333333333333333
+rrf_bm25_lsa,34,the use of ionospheric cross modulation in the determination of ionospheric electron densities and collision frequencies,100,0.2350455494144854,0.3333333333333333,1.0
+rrf_bm25_lsa,35,measurements of ionospheric drifts near the equator,100,0.5067837010870873,0.6,1.0
+rrf_bm25_lsa,36,the use of analogue computers in upper atmosphere theory,100,0.12647135138382856,0.375,0.3333333333333333
+rrf_bm25_lsa,37,the use of lunar radio reflections in investigations of the nature of the moons surface,100,0.8389574121760601,0.76,1.0
+rrf_bm25_lsa,38,what references on comparison between ground level and high altitude balloon cosmic ray results,100,0.6489315753318465,0.9166666666666666,1.0
+rrf_bm25_lsa,39,what references on model experiments in aurora,100,0.4599715079731103,0.4,1.0
+rrf_bm25_lsa,40,what references on integral spectrum of primary cosmic rays,100,0.7503359712972107,0.7586206896551724,1.0
+rrf_bm25_lsa,41,ferromagnetic techniques for computer stores,100,0.13886244387355454,0.25,0.5
+rrf_bm25_lsa,42,solution of differential equations by computer,100,0.8389574121760601,0.8055555555555556,1.0
+rrf_bm25_lsa,43,efficiency of digital computers versus analogue computers in the solution of boundary value problems,100,0.42924861640074785,0.5714285714285714,0.5
+rrf_bm25_lsa,44,methods of error checking in digital computers,100,0.33725693702354287,0.875,1.0
+rrf_bm25_lsa,45,methods of producing minimal nets given a logical function in canonical form,100,0.4412576003965278,0.8,1.0
+rrf_bm25_lsa,46,arithmetic units as required in a digital computer including shift registers serial and parallel adder,100,0.7695261902392828,0.6170212765957447,1.0
+rrf_bm25_lsa,47,information on the design of low drift transistor amplifiers,100,0.6936634693435663,0.75,1.0
+rrf_bm25_lsa,48,information on high current transistor switches,100,0.7039180890341347,1.0,1.0
+rrf_bm25_lsa,49,information on design of time division multiplexing circuits,100,0.23535109180711325,0.5714285714285714,0.3333333333333333
+rrf_bm25_lsa,50,details of available low voltage capacitors,100,0.0,1.0,0.0
+rrf_bm25_lsa,51,design of direct coupled flip flops to function with the maximum variations in the values of the circuit components,100,0.6442227883107535,0.6875,0.5
+rrf_bm25_lsa,52,please supply information on the performance of typical magnetic film memory systems with circuit diagrams,100,0.8006937664098819,0.68,1.0
+rrf_bm25_lsa,53,i would like details of the work which has been done to extend the frequency range of magnetic amplifiers,100,0.1681522864689108,0.23529411764705882,0.25
+rrf_bm25_lsa,54,i would like information on the range of static relays suitable for use at high switching rates,100,0.2934556883974402,0.7,1.0
+rrf_bm25_lsa,55,i am interested in circuitry capable of generating extremely narrow pulses,100,0.3436966913921454,0.7692307692307693,0.5
+rrf_bm25_lsa,56,please supply information on the theory and use of parametric amplifiers,100,0.7084409501232899,0.4358974358974359,1.0
+rrf_bm25_lsa,57,the synthesis of networks with given sampled data transfer functions,100,0.0,0.7,0.0
+rrf_bm25_lsa,58,the theory of stability in relation to control systems with relay elements,100,0.0,0.3,0.0
+rrf_bm25_lsa,59,the use of digital computers to obtain power spectral analysis of numerical data,100,0.0,0.0,0.0
+rrf_bm25_lsa,60,printed circuit design for a random pulse generator of low frequency,100,0.2960819109658652,1.0,0.5
+rrf_bm25_lsa,61,references on electric field theories of the aurora,100,0.4779671403625728,0.3333333333333333,1.0
+rrf_bm25_lsa,62,fast transistor counters,100,0.8454256604216017,0.6666666666666666,1.0
+rrf_bm25_lsa,63,low pass lattice filters,100,0.7877736340270853,0.7333333333333333,1.0
+rrf_bm25_lsa,64,similarities between the diffraction theory of electromagnetic waves and that of electron streams,100,0.0,0.2727272727272727,0.0
+rrf_bm25_lsa,65,the use of complex variables in the theory of communication networks,100,0.3903800499921017,0.75,1.0
+rrf_bm25_lsa,66,the behaviour of a beam of charged particles in the presence of plane conductors,100,0.0,0.25,0.0
+rrf_bm25_lsa,67,predicting the paths of electrons moving in a varying magnetic field,100,0.18340980524840012,0.2962962962962963,0.3333333333333333
+rrf_bm25_lsa,68,active constant voltage transformer for signal distribution,100,0.33013764944712026,0.30303030303030304,1.0
+rrf_bm25_lsa,69,active audio frequency filter with variable cut off slope,100,0.6569815082938862,0.7857142857142857,1.0
+rrf_bm25_lsa,70,variable ultra high frequency attenuators,100,0.41412294568879626,0.8,0.5
+rrf_bm25_lsa,71,faulty operation of feedback time bases,100,0.36885567213865283,0.5238095238095238,1.0
+rrf_bm25_lsa,72,variable capacitance amplifiers,100,0.6437684113853991,0.59375,1.0
+rrf_bm25_lsa,73,transistor sweep generators,100,0.3785988060390612,0.6111111111111112,1.0
+rrf_bm25_lsa,74,advantages of parametric amplifiers,100,0.07839826897867533,0.375,0.16666666666666666
+rrf_bm25_lsa,75,optimising linear networks,100,0.9266360779006398,0.8181818181818182,1.0
+rrf_bm25_lsa,76,transistor phase splitting circuits,100,0.3187704634136789,0.7777777777777778,1.0
+rrf_bm25_lsa,77,please supply information pertinent to the use of surface pretreatment to prevent secondary emission effects in valves,100,0.5033242827953464,0.875,1.0
+rrf_bm25_lsa,78,i wish to have data about the design of mechanical band pass filters for good pass characteristics,100,0.0,0.48,0.0
+rrf_bm25_lsa,79,mechanisms whereby transmission at high frequencies is affected by weather and time of day,100,0.3589542101716347,0.20689655172413793,1.0
+rrf_bm25_lsa,80,could you please give me articles about the possibilities of getting rectification using metallic devices,100,0.08514311764162098,0.07692307692307693,0.2
+rrf_bm25_lsa,81,i wish to calculate the inductance and loss in coils made using printed circuit or other miniaturization ideas. a suitable article please,100,0.3903800499921017,0.75,1.0
+rrf_bm25_lsa,82,analysis of nonlinear systems using phase plane techniques,100,0.48882922182497546,0.5454545454545454,1.0
+rrf_bm25_lsa,83,miniature low noise high gain high impedance amplifiers,100,0.2863459897524692,0.5,1.0
+rrf_bm25_lsa,84,control characteristics of sampling servo systems,100,0.2735872697693364,0.4782608695652174,0.3333333333333333
+rrf_bm25_lsa,85,power spectral density distribution obtained using analogue techniques,100,0.0,0.125,0.0
+rrf_bm25_lsa,86,high stability high input impedance transistorised analogue amplifier,100,0.0,0.4,0.0
+rrf_bm25_lsa,87,electronic specific heat of a superconductor showing a discontinuity at the superconducting critical temperature,100,0.11838279295536293,0.7142857142857143,0.25
+rrf_bm25_lsa,88,an abstract on the field distribution surrounding a charged thin circular disc resting on an infinite dielectric slab,100,0.11004588314904008,0.3,0.3333333333333333
+rrf_bm25_lsa,89,tunnel diode construction and its electrical characteristics explained,100,0.0,0.6666666666666666,0.0
+rrf_bm25_lsa,90,electronic density of states at the surface of a semiconductor compared with that at depth,100,0.522495596791931,0.3448275862068966,1.0
+rrf_bm25_lsa,91,resistivity of metallic thin films related to surface roughness,100,0.6678262889110271,0.6285714285714286,1.0
+rrf_bm25_lsa,92,the phenomenon of radiation caused by charged particles moving in varying electric and magnetic fields,100,0.0,0.42857142857142855,0.0
+rrf_bm25_lsa,93,high frequency oscillators using transistors theoretical treatment and practical circuit details,100,0.22979561007468535,0.4782608695652174,0.2

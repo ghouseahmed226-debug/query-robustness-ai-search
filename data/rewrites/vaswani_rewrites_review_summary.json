@@ -1,0 +1,71 @@
+{
+  "n_records": 734,
+  "n_kept_for_analysis": 644,
+  "labels_by_generator": {
+    "LLM_NaturalQuestion": {
+      "equivalent": 92,
+      "narrower": 1
+    },
+    "LLM_Paraphrase": {
+      "equivalent": 93
+    },
+    "LLM_SynonymSwap": {
+      "equivalent": 92,
+      "broader": 1
+    },
+    "RandomOrderSwap": {
+      "different": 46,
+      "equivalent": 47
+    },
+    "RemoveStopWords": {
+      "equivalent": 81,
+      "different": 1,
+      "narrower": 1
+    }
+  },
+  "typo_calibration_labels": {
+    "equivalent": 30
+  },
+  "typo_share_with_edited_word_in_collection_vocab": {
+    "NeighbCharSwap": [
+      0,
+      93
+    ],
+    "RandomCharSub": [
+      0,
+      93
+    ],
+    "QWERTYCharSub": [
+      0,
+      93
+    ]
+  },
+  "kept_by_generator": {
+    "LLM_NaturalQuestion": 92,
+    "LLM_Paraphrase": 93,
+    "LLM_SynonymSwap": 92,
+    "NeighbCharSwap": 93,
+    "QWERTYCharSub": 93,
+    "RandomCharSub": 93,
+    "RemoveStopWords": 80,
+    "RandomOrderSwap": 8
+  },
+  "kept_by_category": {
+    "naturality": 172,
+    "paraphrasing": 185,
+    "misspelling": 279,
+    "ordering": 8
+  },
+  "unreviewed_candidates": 0,
+  "removed_by_author_recheck": {
+    "RandomOrderSwap": 39,
+    "RemoveStopWords": 1
+  },
+  "reviewer_only_equivalent_by_generator": {
+    "RemoveStopWords": 81,
+    "RandomOrderSwap": 47,
+    "LLM_NaturalQuestion": 92,
+    "LLM_Paraphrase": 93,
+    "LLM_SynonymSwap": 92
+  }
+}

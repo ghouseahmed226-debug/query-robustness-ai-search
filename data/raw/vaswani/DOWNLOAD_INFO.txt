@@ -1,0 +1,8 @@
+downloaded_at_utc=2026-10-17T13:15:34Z
+source_base=https://raw.githubusercontent.com/terrier-org/pyterrier/master/tests/fixtures/vaswani_npl
+pyterrier_master_commit_at_download=2459d8780138d8a7976b7af1bd1e2f467fdc6a02	refs/heads/master
+117ae7491647cb9725621bad52969a78307de19b1757852a0a2383659a856d36  doc-text.trec
+fef998db14818f74a22b2fb2be06425d5fb0dbd83ed9841fa0440e0a5477da7b  query-text.trec
+1b3ed6a43752c7a7becb0dbd1614d662791bb7825b60182fd36be24d480ea447  qrels
+# added 2026-10-21: the corpus file is at <source_base>/corpus/doc-text.trec (the two other files are directly under source_base).
+# md5 of the three files = the md5 identifiers listed by PyTerrier 1.1.2 (pyterrier/datasets/_builtin.py lines 466, 469, 472); see scripts/fetch_vaswani.py.
