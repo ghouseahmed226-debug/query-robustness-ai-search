@@ -160,6 +160,12 @@ def main(argv=None) -> int:
     args = ap.parse_args(argv)
     run = Path(args.run_dir)
     meta = json.loads((run / "run_metadata.json").read_text())
+    missing = [n for n in meta["collection"]["file_sha256"] if not (ROOT / "data/raw/vaswani" / n).exists()]
+    if missing:
+        print(f"Cannot verify: the Vaswani file(s) {', '.join(missing)} are not in data/raw/vaswani.\n"
+              "Run `python scripts/fetch_vaswani.py` first (it downloads and checks them), then run this script again.",
+              file=sys.stderr)
+        return 2
     qrels = load_qrels(ROOT / "data/raw/vaswani/qrels")
     queries = pd.read_csv(run / "queries_used.csv", dtype={"qid": str})
     pq_o = pd.read_csv(run / "per_query_original.csv", dtype={"qid": str})
