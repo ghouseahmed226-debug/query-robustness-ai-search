@@ -1,0 +1,10 @@
+{
+  "bootstrap_B": 10000,
+  "bootstrap_seed": 20261017,
+  "sign_flip_B": 200000,
+  "sign_flip_seed": 20261017,
+  "spearman_bootstrap_B": 2000,
+  "primary_metric": "ndcg@10",
+  "ci_level": 0.95,
+  "primary_family_size": 3
+}

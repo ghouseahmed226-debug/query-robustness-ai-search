@@ -1,0 +1,150 @@
+{
+  "qvr_version": "0.1.0",
+  "created_utc": "2026-10-24T06:32:20+00:00",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "pandas": "3.1.0",
+    "scikit-learn": "1.9.1",
+    "snowballstemmer": "3.1.1"
+  },
+  "config": {
+    "systems": [
+      "bm25",
+      "lsa",
+      "rrf_bm25_lsa"
+    ],
+    "top_k": 100,
+    "k_rrf": 60,
+    "bm25_k1": 1.2,
+    "bm25_b": 0.75,
+    "lsa_dim": 300,
+    "lsa_seed": 0,
+    "dense_model": null,
+    "dense_query_prefix": "",
+    "dense_doc_prefix": "",
+    "dense_batch_size": 32,
+    "dense_max_seq_length": null,
+    "max_queries": null,
+    "ignore_identical_ids": false,
+    "discard_identical_rewrites": true,
+    "rbo_p": 0.9,
+    "overlap_k": 10
+  },
+  "systems": {
+    "bm25": {
+      "system": "bm25",
+      "k1": 1.2,
+      "b": 0.75,
+      "n_docs": 5183,
+      "n_terms": 26193,
+      "avgdl": 164.0011576307158,
+      "analyzer": {
+        "tokenizer": "lowercase, accent-stripped, regex [a-z0-9]+",
+        "n_stopwords": 33,
+        "stemmer": "porter (snowballstemmer)"
+      }
+    },
+    "lsa": {
+      "system": "lsa",
+      "kind": "non-neural latent semantic analysis (TF-IDF + truncated SVD)",
+      "n_components_requested": 300,
+      "n_components_used": 300,
+      "seed": 0,
+      "svd_n_iter": 7,
+      "analyzer": {
+        "tokenizer": "lowercase, accent-stripped, regex [a-z0-9]+",
+        "n_stopwords": 33,
+        "stemmer": "porter (snowballstemmer)"
+      },
+      "n_docs": 5183
+    },
+    "rrf_bm25_lsa": {
+      "system": "rrf_bm25_lsa",
+      "kind": "reciprocal rank fusion",
+      "components": [
+        "bm25",
+        "lsa"
+      ],
+      "k": 60,
+      "input_depth": 100,
+      "output_depth": 100
+    }
+  },
+  "collection": {
+    "name": "scifact",
+    "format": "beir",
+    "split": "test",
+    "n_docs": 5183,
+    "n_queries": 1109,
+    "n_qrels_pairs": 339,
+    "n_queries_with_qrels": 300,
+    "n_queries_with_relevant": 300,
+    "judgment_values": {
+      "1": 339
+    },
+    "qrels_docs_missing_from_corpus": 0,
+    "file_sha256": {
+      "corpus.jsonl": "dec31c8182f3d744c7d2c09423756fd1d17cbef75808db13ba01cc0aab4d1ac6",
+      "queries.jsonl": "8ff84a7c903f722981cd8d595c022660140c51867b27608a6d4910db86080313",
+      "qrels/test.tsv": "0864bb985e0ca2367ba217977e72004d549054b2b06666ed9d4825ac7c21284c"
+    }
+  },
+  "counts": {
+    "queries_selected": 300,
+    "rewrites_kept": 894,
+    "rewrites_kept_by_category": {
+      "misspelling": 894
+    },
+    "rewrites_kept_by_generator": {
+      "NeighbCharSwap": 300,
+      "RandomCharSub": 300,
+      "QWERTYCharSub": 294
+    },
+    "rewrites_kept_by_status": {
+      "automatic_by_construction": 894
+    },
+    "rewrites_dropped": {
+      "status_not_allowed": 582
+    }
+  },
+  "inputs": {
+    "rewrite_file": "data/rewrites/scifact_automatic.jsonl",
+    "rewrite_file_sha256": "cabf9ea44fd5034fbf05bcf64dadd275b4e119aaf6c602d49a8ed2b2f3d787de",
+    "analysis_plan": "C:\\Users\\gamer\\Downloads\\query-robustness-AI-search\\query-robustness-AI-search\\docs\\ANALYSIS_PLAN.md",
+    "analysis_plan_sha256": "196bae3659bfc1e0164b8d9960636b64d1c78c57d7b75b62b6efb96802390706"
+  },
+  "timings_s": {
+    "bm25": {
+      "index_s": 3.82,
+      "search_s": 0.556
+    },
+    "lsa": {
+      "index_s": 42.273,
+      "search_s": 1.483
+    }
+  },
+  "total_runtime_s": 51.981,
+  "allowed_statuses": [
+    "automatic_by_construction"
+  ],
+  "code_sha256": {
+    "src/qvr/__init__.py": "41957a505d258ca3006a47f543247d00425a3dab3a82cbc43a2ef6aea5b816af",
+    "src/qvr/analysis.py": "54782e0c4ebc1421fcdbeb8d08f602c8326b4184290f20ab288b263f3396059e",
+    "src/qvr/audit.py": "1f51a8203fd5060181b27e6305bb9e38f84a15c5c6511a96aa75b68e2660422f",
+    "src/qvr/bm25.py": "32e240d7be55bcabd2d3743674dcc743a7770b69dbef1e14943da6ac2e0e5a93",
+    "src/qvr/data.py": "ea75cdfd181daf0a86d9fbd9cab92289d6073ac200b47100538e3bfe1a7e3a0f",
+    "src/qvr/dense.py": "d30e169acadc38e0a8fac35c388868a96cdacf7c566e531b8fd4545abdd08055",
+    "src/qvr/fusion.py": "f0164cff6e1ae88e9d51ba7553cf1346489124dbe5f9c68f0d3f63096a37c7c2",
+    "src/qvr/metrics.py": "717f52fd52a2f258c71bb5ef3437613f013d07ea89e89478b1c19dbe1cc8a35c",
+    "src/qvr/ranking.py": "e67006aaa7b0129f69e6584b921ae0d2f26929e5d830d7a82b32f0db970ed8b9",
+    "src/qvr/rewrites.py": "84922946d6feb85413317dffc3f45378ae0737f0233be3e638db472dc710b72d",
+    "src/qvr/run.py": "4781a28ab3a75212b22c3e816e308ef39b05435060d795e109b67e5dedb2c3e9",
+    "src/qvr/stability.py": "5415e3a5cfaba8be5b5557c2f3b46f5fc9eedc7d17e0a119c6e934a7cf253ed9",
+    "src/qvr/stats.py": "1a60afa262bdc2820678f70a887e9fe0b55019d697e0814f0a79a32945f17f72",
+    "src/qvr/text.py": "1e720cf520bb5f3dbccae6dfa566c41ff71a92853b20720dd52bd36a0460aa80"
+  },
+  "command": "scripts/run_experiment.py --dataset beir --data-dir data/raw/beir/scifact --rewrites data/rewrites/scifact_automatic.jsonl --allowed-statuses automatic_by_construction --systems bm25 lsa rrf_bm25_lsa --out results/beir/scifact"
+}

@@ -1,0 +1,324 @@
+qid,query,n_relevant,n_judged
+PLAIN-2,Do Cholesterol Statin Drugs Cause Breast Cancer?,24,24
+PLAIN-12,Exploiting Autophagy to Live Longer,30,30
+PLAIN-23,How to Reduce Exposure to Alkylphenols Through Your Diet,90,90
+PLAIN-33,What’s Driving America’s Obesity Problem?,32,32
+PLAIN-44,Who Should be Careful About Curcumin?,58,58
+PLAIN-56,Foods for Glaucoma,50,50
+PLAIN-68,What is Actually in Chicken Nuggets?,55,55
+PLAIN-78,What Do Meat Purge and Cola Have in Common?,62,62
+PLAIN-91,Chronic Headaches and Pork Parasites,64,64
+PLAIN-102,Stopping Heart Disease in Childhood,24,24
+PLAIN-112,Food Dyes and ADHD,56,56
+PLAIN-123,How Citrus Might Help Keep Your Hands Warm,51,51
+PLAIN-133,Starving Tumors of Their Blood Supply,36,36
+PLAIN-143,Are Dental X-Rays Safe?,51,51
+PLAIN-153,How Should I Take Probiotics?,47,47
+PLAIN-165,Breast Cancer & Alcohol: How Much is Safe?,36,36
+PLAIN-175,Diet and Cellulite,37,37
+PLAIN-186,Best Treatment for Constipation,24,24
+PLAIN-196,Should We Avoid Titanium Dioxide?,69,69
+PLAIN-207,Avoiding Cooked Meat Carcinogens,55,55
+PLAIN-217,Plant-Based Diets for Psoriasis,36,36
+PLAIN-227,Increasing Muscle Strength with Fenugreek,40,40
+PLAIN-238,How Chemically Contaminated Are We?,54,54
+PLAIN-248,Treating an Enlarged Prostate With Diet,31,31
+PLAIN-259,Optimal Phytosterol Dose and Source,14,14
+PLAIN-270,Is Caffeinated Tea Really Dehydrating?,52,52
+PLAIN-280,Mercury Testing Recommended Before Pregnancy,20,20
+PLAIN-291,Stool Size and Breast Cancer Risk,13,13
+PLAIN-307,Vitamin D: Shedding some light on the new recommendations,3,3
+PLAIN-320,Breast Cancer and Diet,42,42
+PLAIN-332,Can antioxidant-rich spices counteract the effects of a high-fat meal?,2,2
+PLAIN-344,Dioxins Stored in Our Own Fat May Increase Diabetes Risk,61,61
+PLAIN-358,Didn't another study show carnitine was good for the heart?,3,3
+PLAIN-371,Any update on the scary in vitro avocado data?,2,2
+PLAIN-383,What do you think of Dr. Jenkins' take on paleolithic diets?,5,5
+PLAIN-395,What about pepper plus turmeric in V8 juice?,3,3
+PLAIN-407,Is annatto food coloring safe?,3,3
+PLAIN-418,Fresh fruit versus frozen--which is better?,3,3
+PLAIN-430,Are krill oil supplements better than fish oil capsules?,8,8
+PLAIN-441,Is apple cider vinegar good for you?,5,5
+PLAIN-457,How can you believe in any scientific study?,5,5
+PLAIN-468,Is vitamin D3 (cholecalciferol) preferable to D2 (ergocalciferol)?,10,10
+PLAIN-478,accidents,1,1
+PLAIN-488,adenovirus 36,15,15
+PLAIN-499,African-American,34,34
+PLAIN-510,airport scanners,6,6
+PLAIN-520,Alli,1,1
+PLAIN-531,alternative medicine,308,308
+PLAIN-541,American Dental Association,6,6
+PLAIN-551,amnesia,2,2
+PLAIN-561,aneurysm,25,25
+PLAIN-571,anisakis,7,7
+PLAIN-583,antinutrients,44,44
+PLAIN-593,apnea,3,3
+PLAIN-603,Arkansas,1,1
+PLAIN-613,ascorbic acid,10,10
+PLAIN-623,Atkins diet,41,41
+PLAIN-634,avocados,21,21
+PLAIN-645,bagels,29,29
+PLAIN-660,beans,475,475
+PLAIN-671,benzene,1,1
+PLAIN-681,betel nuts,1,1
+PLAIN-691,bioavailability,21,21
+PLAIN-701,black raspberries,8,8
+PLAIN-711,blood clots,57,57
+PLAIN-721,BMAA,25,25
+PLAIN-731,bone fractures,54,54
+PLAIN-741,BPH,19,19
+PLAIN-751,BRCA genes,7,7
+PLAIN-761,breast pain,6,6
+PLAIN-771,bronchiolitis obliterans,3,3
+PLAIN-782,Bush administration,2,2
+PLAIN-792,cadaverine,6,6
+PLAIN-806,caloric restriction,96,96
+PLAIN-817,canker sores,1,1
+PLAIN-827,carcinogens,244,244
+PLAIN-838,carrageenan,9,9
+PLAIN-850,cauliflower,57,57
+PLAIN-872,chanterelle mushrooms,1,1
+PLAIN-882,Chernobyl,15,15
+PLAIN-892,chickpeas,92,92
+PLAIN-902,chlorophyll,4,4
+PLAIN-913,cinnamon,34,34
+PLAIN-924,cocaine,32,32
+PLAIN-934,coffee,101,101
+PLAIN-946,coma,31,31
+PLAIN-956,cooking methods,206,206
+PLAIN-966,cortisol,3,3
+PLAIN-977,crib death,3,3
+PLAIN-987,cumin,3,3
+PLAIN-997,Czechoslovakia,2,2
+PLAIN-1008,deafness,5,5
+PLAIN-1018,DHA,60,60
+PLAIN-1028,dietary scoring,1,1
+PLAIN-1039,domoic acid,2,2
+PLAIN-1050,Dr. Dean Ornish,94,94
+PLAIN-1066,Dr. Walter Willett,9,9
+PLAIN-1088,ECMO,5,5
+PLAIN-1098,eggnog,5,5
+PLAIN-1109,endocrine disruptors,98,98
+PLAIN-1119,energy drinks,11,11
+PLAIN-1130,ergothioneine,1,1
+PLAIN-1141,Evidence-based medicine,16,16
+PLAIN-1151,factory farming practices,153,153
+PLAIN-1161,fava beans,1,1
+PLAIN-1172,fenugreek,19,19
+PLAIN-1183,Finland,25,25
+PLAIN-1193,flax oil,18,18
+PLAIN-1203,folic acid,12,12
+PLAIN-1214,Fosamax,17,17
+PLAIN-1225,fructose,27,27
+PLAIN-1236,galactosemia,5,5
+PLAIN-1249,genetic manipulation,4,4
+PLAIN-1262,Global Burden of Disease Study,10,10
+PLAIN-1275,goji berries,55,55
+PLAIN-1288,grapes,196,196
+PLAIN-1299,growth promoters,61,61
+PLAIN-1309,halibut,4,4
+PLAIN-1320,Harvard Physicians’ Study II,6,6
+PLAIN-1331,hearing,1,1
+PLAIN-1342,heme iron,16,16
+PLAIN-1353,hernia,4,4
+PLAIN-1363,Hiroshima,11,11
+PLAIN-1374,hormonal dysfunction,26,26
+PLAIN-1387,hyperactivity,12,12
+PLAIN-1398,IGF-1,103,103
+PLAIN-1409,industrial toxins,253,253
+PLAIN-1419,insects,65,65
+PLAIN-1429,Iowa Women’s Health Study,6,6
+PLAIN-1441,Japan,186,186
+PLAIN-1453,junk food,245,245
+PLAIN-1463,kidney beans,24,24
+PLAIN-1473,kohlrabi,1,1
+PLAIN-1485,lard,54,54
+PLAIN-1496,leeks,1,1
+PLAIN-1506,leucine,15,15
+PLAIN-1516,Lindane,2,2
+PLAIN-1527,liver disease,202,202
+PLAIN-1537,low-carb diets,45,45
+PLAIN-1547,lyme disease,6,6
+PLAIN-1557,magnesium,26,26
+PLAIN-1568,maple syrup,2,2
+PLAIN-1579,mastitis,5,5
+PLAIN-1590,medical ethics,18,18
+PLAIN-1601,memory,74,74
+PLAIN-1611,mesquite,6,6
+PLAIN-1621,Mevacor,4,4
+PLAIN-1635,milk,431,431
+PLAIN-1645,molasses,6,6
+PLAIN-1656,mouth cancer,28,28
+PLAIN-1667,muscle health,159,159
+PLAIN-1679,myelopathy,1,1
+PLAIN-1690,National Academy of Sciences,4,4
+PLAIN-1700,Native Americans,5,5
+PLAIN-1710,neurocysticercosis,16,16
+PLAIN-1721,NIH-AARP study,31,31
+PLAIN-1731,norovirus,3,3
+PLAIN-1741,nuts,420,420
+PLAIN-1752,okra,1,1
+PLAIN-1762,oral intraepithelial neoplasia,8,8
+PLAIN-1772,organotins,2,2
+PLAIN-1784,oxen meat,2,2
+PLAIN-1794,Panama,2,2
+PLAIN-1805,Parkinson's disease,116,116
+PLAIN-1817,peanut butter,27,27
+PLAIN-1827,Peoria,3,3
+PLAIN-1837,pesticides,196,196
+PLAIN-1847,philippines,11,11
+PLAIN-1857,phytic acid,33,33
+PLAIN-1867,pineapples,7,7
+PLAIN-1877,plant-based diet,36,36
+PLAIN-1887,poisonous plants,4,4
+PLAIN-1897,polypropylene plastic,2,2
+PLAIN-1909,pork,463,463
+PLAIN-1919,poultry workers,27,27
+PLAIN-1929,prenatal vitamins,10,10
+PLAIN-1940,prolactin,12,12
+PLAIN-1950,prunes,13,13
+PLAIN-1962,pumpkin,13,13
+PLAIN-1972,quinine,11,11
+PLAIN-1983,rapamycin,32,32
+PLAIN-1995,red tea,11,11
+PLAIN-2009,rhabdomyolysis,8,8
+PLAIN-2019,rickets,3,3
+PLAIN-2030,Rutin,6,6
+PLAIN-2040,salmon,132,132
+PLAIN-2051,saturated fat,355,355
+PLAIN-2061,seafood,410,410
+PLAIN-2071,serotonin,45,45
+PLAIN-2081,shelf life,1,1
+PLAIN-2092,sirtuins,10,10
+PLAIN-2102,smoking,421,421
+PLAIN-2113,soil health,1,1
+PLAIN-2124,spearmint,17,17
+PLAIN-2134,Splenda,12,12
+PLAIN-2145,St. John's wort,9,9
+PLAIN-2156,stevia,6,6
+PLAIN-2167,subsidies,1,1
+PLAIN-2177,sulfur,24,24
+PLAIN-2187,suppositories,9,9
+PLAIN-2197,sweeteners,58,58
+PLAIN-2209,taro,2,2
+PLAIN-2220,tempeh,9,9
+PLAIN-2230,thiamine,7,7
+PLAIN-2240,titanium dioxide,11,11
+PLAIN-2250,tongue worm,2,2
+PLAIN-2261,trans fats,60,60
+PLAIN-2271,Tufts,10,10
+PLAIN-2281,turnips,1,1
+PLAIN-2291,ultra-processed foods,5,5
+PLAIN-2301,uterine health,13,13
+PLAIN-2311,veal,2,2
+PLAIN-2321,veggie chicken,5,5
+PLAIN-2332,viral infections,97,97
+PLAIN-2343,vitamin K,2,2
+PLAIN-2354,walnut oil,5,5
+PLAIN-2364,weight gain,15,15
+PLAIN-2375,whiting,2,2
+PLAIN-2386,worms,19,19
+PLAIN-2396,Yale,18,18
+PLAIN-2408,Zoloft,5,5
+PLAIN-2430,Preventing Brain Loss with B Vitamins?,46,46
+PLAIN-2440,More Than an Apple a Day: Combating Common Diseases,21,21
+PLAIN-2450,Are Organic Foods Safer?,38,38
+PLAIN-2460,Diabetes as a Disease of Fat Toxicity,31,31
+PLAIN-2470,Is Milk Good for Our Bones?,73,73
+PLAIN-2480,Preventing Ulcerative Colitis with Diet,18,18
+PLAIN-2490,The Actual Benefit of Diet vs. Drugs,23,23
+PLAIN-2500,The Saturated Fat Studies: Buttering Up the Public,7,7
+PLAIN-2510,Coffee and Artery Function,46,46
+PLAIN-2520,Caloric Restriction vs. Plant-Based Diets,73,73
+PLAIN-2530,Infectobesity: Adenovirus 36 and Childhood Obesity,72,72
+PLAIN-2540,Does Cholesterol Size Matter?,21,21
+PLAIN-2550,Barriers to Heart Disease Prevention,25,25
+PLAIN-2560,Childhood Constipation and Cow’s Milk,21,21
+PLAIN-2570,Diabetics Should Take Their Pulses,40,40
+PLAIN-2580,Academy of Nutrition and Dietetics Conflicts of Interest,23,23
+PLAIN-2590,Do Vegetarians Get Enough Protein?,63,63
+PLAIN-2600,Eggs and Arterial Function,10,10
+PLAIN-2610,Treating Asthma With Plants vs. Supplements?,61,61
+PLAIN-2620,Phytates for the Treatment of Cancer,55,55
+PLAIN-2630,Alkylphenol Endocrine Disruptors and Allergies,48,48
+PLAIN-2640,Chicken Salmonella Thanks to Meat Industry Lawsuit,48,48
+PLAIN-2650,Turmeric Curcumin and Osteoarthritis,29,29
+PLAIN-2660,How Long to Detox From Fish Before Pregnancy?,27,27
+PLAIN-2670,Is Caramel Color Carcinogenic?,35,35
+PLAIN-2680,Counteracting the Effects of Dioxins Through Diet,14,14
+PLAIN-2690,Chronic Headaches and Pork Tapeworms,43,43
+PLAIN-2700,Heart Disease Starts in Childhood,10,10
+PLAIN-2710,Artificial Food Colors and ADHD,21,21
+PLAIN-2720,Keeping Your Hands Warm With Citrus,36,36
+PLAIN-2730,Anti-Angiogenesis: Cutting Off Tumor Supply Lines,29,29
+PLAIN-2740,Cancer Risk From CT Scan Radiation,50,50
+PLAIN-2750,Preventing the Common Cold with Probiotics?,59,59
+PLAIN-2760,Eating Healthy on a Budget,8,8
+PLAIN-2770,Flaxseeds & Breast Cancer Survival: Clinical Evidence,41,41
+PLAIN-2780,Do Fruit & Nut Bars Cause Weight Gain?,22,22
+PLAIN-2790,Titanium Dioxide & Inflammatory Bowel Disease,59,59
+PLAIN-2800,Prolonged Liver Function Enhancement From Broccoli,24,24
+PLAIN-2810,Apple Juice May Be Worse Than Sugar Water,8,8
+PLAIN-2820,Preventing Strokes with Diet,8,8
+PLAIN-2830,Neurobiology of Artificial Sweeteners,3,3
+PLAIN-2840,Benefits of Fenugreek Seeds,17,17
+PLAIN-2850,More Antibiotics In White Meat or Dark Meat?,9,9
+PLAIN-2860,BPA Plastic and Male Sexual Dysfunction,2,2
+PLAIN-2870,Filled Full of Lead,5,5
+PLAIN-2880,The Answer to the Pritikin Puzzle,17,17
+PLAIN-2890,To Snack or Not to Snack?,29,29
+PLAIN-2900,Boosting Good Bacteria in the Colon Without Probiotics,12,12
+PLAIN-2910,Optimal Phytosterol Dose,15,15
+PLAIN-2920,Human Neurotransmitters in Plants,7,7
+PLAIN-2930,Kiwifruit for Irritable Bowel Syndrome,14,14
+PLAIN-2940,Dietary Treatment of Crohn's Disease,22,22
+PLAIN-2950,Unsafe at Any Feed,2,2
+PLAIN-2960,Pharmacists Versus Health Food Store Employees: Who Gives Better Advice?,2,2
+PLAIN-2970,Preventing Cataracts with Diet,9,9
+PLAIN-2981,Cheese Mites and Maggots,7,7
+PLAIN-2991,Cholesterol and Lower Back Pain,2,2
+PLAIN-3001,EPIC Findings on Lymphoma,2,2
+PLAIN-3014,Sometimes the Enzyme Myth Is True,1,1
+PLAIN-3026,Vitamin C-Enriched Bacon,1,1
+PLAIN-3037,Out of the Lab Onto the Track,4,4
+PLAIN-3053,Dragon's Blood,3,3
+PLAIN-3063,Better Than Goji Berries,4,4
+PLAIN-3074,How to Help Prevent Abdominal Aortic Aneurysms,1,1
+PLAIN-3085,The Difficulty of Arriving at a Vitamin D Recommendation,2,2
+PLAIN-3097,Amyloid and Apple Juice,4,4
+PLAIN-3116,Dietary Guidelines: From Dairies to Berries,1,1
+PLAIN-3131,Are Avocados Good for You?,6,6
+PLAIN-3141,Relieving Yourself of Excess Estrogen,34,34
+PLAIN-3151,Too Much Iodine Can Be as Bad as Too Little,18,18
+PLAIN-3161,Is Milk and Mucus a Myth?,43,43
+PLAIN-3171,Convergence of Evidence,34,34
+PLAIN-3181,Is Dragon Fruit Good For You?,27,27
+PLAIN-3191,Is Distilled Fish Oil Toxin-Free?,16,16
+PLAIN-3201,Acne & Cancer Connection,32,32
+PLAIN-3211,Overdosing on Greens,18,18
+PLAIN-3221,Dietary Theory of Alzheimer's,24,24
+PLAIN-3231,Meat & Multiple Myeloma,8,8
+PLAIN-3241,Apthous Ulcer Mystery Solved,29,29
+PLAIN-3251,EPIC Study,21,21
+PLAIN-3261,Update on Herbalife®,13,13
+PLAIN-3271,Saturated Fat & Cancer Progression,49,49
+PLAIN-3281,Aluminum in Vaccines vs. Food,26,26
+PLAIN-3292,Are Multivitamins Good For You?,7,7
+PLAIN-3302,Fish Fog,37,37
+PLAIN-3312,Sexually Transmitted Fish Toxin,13,13
+PLAIN-3322,Veggies vs. Cancer,79,79
+PLAIN-3332,Alcohol Risks vs. Benefits,14,14
+PLAIN-3342,Is Coconut Milk Good For You?,3,3
+PLAIN-3352,Boosting Heart Nerve Control,39,39
+PLAIN-3362,Kuna Indian Secret,11,11
+PLAIN-3372,The Healthiest Sweetener,14,14
+PLAIN-3382,Are Artificial Colors Bad for You?,14,14
+PLAIN-3392,Healthiest Airplane Beverage,23,23
+PLAIN-3402,Antioxidant Content of 300 Foods,14,14
+PLAIN-3412,Plant vs. Cow Calcium,49,49
+PLAIN-3422,Vitamin Supplements Worth Taking,31,31
+PLAIN-3432,Healthy Chocolate Milkshakes,42,42
+PLAIN-3442,The Healthiest Vegetables,29,29
+PLAIN-3452,Bowel Movement Frequency,17,17
+PLAIN-3462,Olive Oil and Artery Function,64,64
+PLAIN-3472,How Doctors Responded to Being Named a Leading Killer,17,17
