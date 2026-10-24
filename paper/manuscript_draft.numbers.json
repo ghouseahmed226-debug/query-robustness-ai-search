@@ -1,0 +1,482 @@
+[
+ {
+  "placeholder": "{{m:collection/n_docs|int}}",
+  "value": "11,429"
+ },
+ {
+  "placeholder": "{{m:collection/n_queries|int}}",
+  "value": "93"
+ },
+ {
+  "placeholder": "{{m:counts/rewrites_kept|int}}",
+  "value": "644"
+ },
+ {
+  "placeholder": "{{p:bm25/misspelling/ndcg@10_rel|pct1}}",
+  "value": "−18.5%"
+ },
+ {
+  "placeholder": "{{p:lsa/misspelling/ndcg@10_rel|pct1}}",
+  "value": "−21.4%"
+ },
+ {
+  "placeholder": "{{p:rrf_bm25_lsa/misspelling/ndcg@10_rel|pct1}}",
+  "value": "−20.2%"
+ },
+ {
+  "placeholder": "{{p:bm25/paraphrasing/ndcg@10_rel|pct1}}",
+  "value": "−13.3%"
+ },
+ {
+  "placeholder": "{{p:bm25/paraphrasing/p_holm|peq}}",
+  "value": "p = 0.004"
+ },
+ {
+  "placeholder": "{{p:lsa/paraphrasing/ndcg@10_rel|pct1}}",
+  "value": "−5.3%"
+ },
+ {
+  "placeholder": "{{p:rrf_bm25_lsa/paraphrasing/ndcg@10_rel|pct1}}",
+  "value": "−7.8%"
+ },
+ {
+  "placeholder": "{{s:lsa/rho|f2}}",
+  "value": "−0.60"
+ },
+ {
+  "placeholder": "{{s:rrf_bm25_lsa/rho|f2}}",
+  "value": "−0.67"
+ },
+ {
+  "placeholder": "{{x:n_tests|int}}",
+  "value": "85"
+ },
+ {
+  "placeholder": "{{m:collection/n_docs|int}}",
+  "value": "11,429"
+ },
+ {
+  "placeholder": "{{m:collection/n_queries|int}}",
+  "value": "93"
+ },
+ {
+  "placeholder": "{{m:collection/n_qrels_pairs|int}}",
+  "value": "2,083"
+ },
+ {
+  "placeholder": "{{m:config/top_k|int}}",
+  "value": "100"
+ },
+ {
+  "placeholder": "{{m:config/bm25_k1|f2}}",
+  "value": "1.20"
+ },
+ {
+  "placeholder": "{{m:config/bm25_b|f2}}",
+  "value": "0.75"
+ },
+ {
+  "placeholder": "{{m:config/lsa_dim|int}}",
+  "value": "300"
+ },
+ {
+  "placeholder": "{{m:config/lsa_seed|int}}",
+  "value": "0"
+ },
+ {
+  "placeholder": "{{m:config/k_rrf|int}}",
+  "value": "60"
+ },
+ {
+  "placeholder": "{{m:config/top_k|int}}",
+  "value": "100"
+ },
+ {
+  "placeholder": "{{x:n_candidates|int}}",
+  "value": "734"
+ },
+ {
+  "placeholder": "{{TABLE:rewrites}}",
+  "value": "<table rewrites>"
+ },
+ {
+  "placeholder": "{{x:typo_vocab_hits|int}}",
+  "value": "0"
+ },
+ {
+  "placeholder": "{{x:typo_total|int}}",
+  "value": "279"
+ },
+ {
+  "placeholder": "{{x:n_machine_candidates|int}}",
+  "value": "455"
+ },
+ {
+  "placeholder": "{{x:n_assistant_written|int}}",
+  "value": "279"
+ },
+ {
+  "placeholder": "{{rw:labels_by_generator/RandomOrderSwap/equivalent|int}}",
+  "value": "47"
+ },
+ {
+  "placeholder": "{{x:cand/RandomOrderSwap|int}}",
+  "value": "93"
+ },
+ {
+  "placeholder": "{{x:n_candidates|int}}",
+  "value": "734"
+ },
+ {
+  "placeholder": "{{x:n_kept|int}}",
+  "value": "644"
+ },
+ {
+  "placeholder": "{{x:rewrites_with_status/automatic|int}}",
+  "value": "279"
+ },
+ {
+  "placeholder": "{{x:rewrites_with_status/llm_reviewed|int}}",
+  "value": "365"
+ },
+ {
+  "placeholder": "{{x:n_dropped|int}}",
+  "value": "90"
+ },
+ {
+  "placeholder": "{{x:dropped/RandomOrderSwap|int}}",
+  "value": "85"
+ },
+ {
+  "placeholder": "{{a:bootstrap_B|int}}",
+  "value": "10,000"
+ },
+ {
+  "placeholder": "{{a:bootstrap_seed|str}}",
+  "value": "20261017"
+ },
+ {
+  "placeholder": "{{a:sign_flip_B|int}}",
+  "value": "200,000"
+ },
+ {
+  "placeholder": "{{a:primary_family_size|int}}",
+  "value": "12"
+ },
+ {
+  "placeholder": "{{a:spearman_bootstrap_B|int}}",
+  "value": "2,000"
+ },
+ {
+  "placeholder": "{{m:created_utc|str}}",
+  "value": "2026-10-20T06:02:38+00:00"
+ },
+ {
+  "placeholder": "{{m:inputs/analysis_plan_sha256|h16}}",
+  "value": "6d31b030288b1c85"
+ },
+ {
+  "placeholder": "{{x:n_tests|int}}",
+  "value": "85"
+ },
+ {
+  "placeholder": "{{b:bm25/ndcg@10|f3ci}}",
+  "value": "0.432 (95% CI 0.375 to 0.489)"
+ },
+ {
+  "placeholder": "{{b:lsa/ndcg@10|f3ci}}",
+  "value": "0.282 (95% CI 0.232 to 0.334)"
+ },
+ {
+  "placeholder": "{{b:rrf_bm25_lsa/ndcg@10|f3ci}}",
+  "value": "0.382 (95% CI 0.326 to 0.437)"
+ },
+ {
+  "placeholder": "{{TABLE:baseline}}",
+  "value": "<table baseline>"
+ },
+ {
+  "placeholder": "{{TABLE:primary}}",
+  "value": "<table primary>"
+ },
+ {
+  "placeholder": "{{p:bm25/misspelling/ndcg@10_rel|pctci}}",
+  "value": "−18.5% (95% CI −25.4% to −12.1%)"
+ },
+ {
+  "placeholder": "{{p:lsa/misspelling/ndcg@10_rel|pctci}}",
+  "value": "−21.4% (95% CI −29.7% to −13.8%)"
+ },
+ {
+  "placeholder": "{{p:rrf_bm25_lsa/misspelling/ndcg@10_rel|pctci}}",
+  "value": "−20.2% (95% CI −26.7% to −14.2%)"
+ },
+ {
+  "placeholder": "{{a:sign_flip_B|int}}",
+  "value": "200,000"
+ },
+ {
+  "placeholder": "{{p:bm25/paraphrasing/ndcg@10_rel|pctci}}",
+  "value": "−13.3% (95% CI −19.7% to −6.7%)"
+ },
+ {
+  "placeholder": "{{p:bm25/paraphrasing/p_holm|peq}}",
+  "value": "p = 0.004"
+ },
+ {
+  "placeholder": "{{p:lsa/paraphrasing/ndcg@10_rel|pctci}}",
+  "value": "−5.3% (95% CI −13.2% to 3.7%)"
+ },
+ {
+  "placeholder": "{{p:lsa/paraphrasing/p_holm|peq}}",
+  "value": "p = 1.00"
+ },
+ {
+  "placeholder": "{{p:rrf_bm25_lsa/paraphrasing/ndcg@10_rel|pctci}}",
+  "value": "−7.8% (95% CI −13.5% to −1.7%)"
+ },
+ {
+  "placeholder": "{{p:rrf_bm25_lsa/paraphrasing/p_signflip|f3}}",
+  "value": "0.017"
+ },
+ {
+  "placeholder": "{{p:rrf_bm25_lsa/paraphrasing/p_holm|f3}}",
+  "value": "0.133"
+ },
+ {
+  "placeholder": "{{p:bm25/naturality/ndcg@10_rel|pct1}}",
+  "value": "−1.9%"
+ },
+ {
+  "placeholder": "{{p:lsa/naturality/ndcg@10_rel|pct1}}",
+  "value": "−0.4%"
+ },
+ {
+  "placeholder": "{{p:rrf_bm25_lsa/naturality/ndcg@10_rel|pct1}}",
+  "value": "0.5%"
+ },
+ {
+  "placeholder": "{{p:bm25/ordering/n_rewrites|int}}",
+  "value": "8"
+ },
+ {
+  "placeholder": "{{p:bm25/misspelling/recall@100_rel|pct1}}",
+  "value": "−10.6%"
+ },
+ {
+  "placeholder": "{{p:lsa/misspelling/recall@100_rel|pct1}}",
+  "value": "−12.0%"
+ },
+ {
+  "placeholder": "{{p:rrf_bm25_lsa/misspelling/recall@100_rel|pct1}}",
+  "value": "−9.6%"
+ },
+ {
+  "placeholder": "{{p:bm25/paraphrasing/recall@100_rel|pct1}}",
+  "value": "−7.1%"
+ },
+ {
+  "placeholder": "{{p:lsa/paraphrasing/recall@100_rel|pct1}}",
+  "value": "−5.5%"
+ },
+ {
+  "placeholder": "{{p:rrf_bm25_lsa/paraphrasing/recall@100_rel|pct1}}",
+  "value": "−5.6%"
+ },
+ {
+  "placeholder": "{{p:bm25/paraphrasing/mrr@10_rel|pctci}}",
+  "value": "−8.0% (95% CI −16.1% to 1.0%)"
+ },
+ {
+  "placeholder": "{{TABLE:stability}}",
+  "value": "<table stability>"
+ },
+ {
+  "placeholder": "{{p:bm25/misspelling/overlap@10|f2}}",
+  "value": "0.66"
+ },
+ {
+  "placeholder": "{{p:lsa/misspelling/overlap@10|f2}}",
+  "value": "0.69"
+ },
+ {
+  "placeholder": "{{p:rrf_bm25_lsa/misspelling/overlap@10|f2}}",
+  "value": "0.67"
+ },
+ {
+  "placeholder": "{{p:bm25/paraphrasing/overlap@10|f2}}",
+  "value": "0.55"
+ },
+ {
+  "placeholder": "{{p:lsa/paraphrasing/overlap@10|f2}}",
+  "value": "0.61"
+ },
+ {
+  "placeholder": "{{p:rrf_bm25_lsa/paraphrasing/overlap@10|f2}}",
+  "value": "0.60"
+ },
+ {
+  "placeholder": "{{s:bm25/rho|f2ci_t}}",
+  "value": "−0.67 [−0.74, −0.59]"
+ },
+ {
+  "placeholder": "{{s:lsa/rho|f2ci_t}}",
+  "value": "−0.60 [−0.66, −0.53]"
+ },
+ {
+  "placeholder": "{{s:rrf_bm25_lsa/rho|f2ci_t}}",
+  "value": "−0.67 [−0.74, −0.60]"
+ },
+ {
+  "placeholder": "{{s:bm25/n_pairs|int}}",
+  "value": "644"
+ },
+ {
+  "placeholder": "{{TABLE:generator}}",
+  "value": "<table generator>"
+ },
+ {
+  "placeholder": "{{g:bm25/LLM_SynonymSwap/ndcg@10_rel|pct1}}",
+  "value": "−18.5%"
+ },
+ {
+  "placeholder": "{{g:bm25/LLM_Paraphrase/ndcg@10_rel|pct1}}",
+  "value": "−8.6%"
+ },
+ {
+  "placeholder": "{{g:lsa/LLM_Paraphrase/ndcg@10_rel|pctci}}",
+  "value": "0.9% (95% CI −7.9% to 10.5%)"
+ },
+ {
+  "placeholder": "{{g:lsa/LLM_SynonymSwap/ndcg@10_rel|pct1}}",
+  "value": "−12.1%"
+ },
+ {
+  "placeholder": "{{TABLE:hybrid}}",
+  "value": "<table hybrid>"
+ },
+ {
+  "placeholder": "{{h:bm25/paraphrasing/diff|f3sci_t}}",
+  "value": "+0.028 [+0.005, +0.051]"
+ },
+ {
+  "placeholder": "{{h:bm25/misspelling/diff|f3sci_t}}",
+  "value": "+0.003 [−0.014, +0.021]"
+ },
+ {
+  "placeholder": "{{h:lsa/misspelling/diff|f3sci_t}}",
+  "value": "−0.017 [−0.033, −0.001]"
+ },
+ {
+  "placeholder": "{{p:rrf_bm25_lsa/paraphrasing/ndcg@10_rewrite|f3}}",
+  "value": "0.352"
+ },
+ {
+  "placeholder": "{{p:bm25/paraphrasing/ndcg@10_rewrite|f3}}",
+  "value": "0.374"
+ },
+ {
+  "placeholder": "{{pr:bm25/ordering/n_rewrites|int}}",
+  "value": "47"
+ },
+ {
+  "placeholder": "{{p:bm25/ordering/n_rewrites|int}}",
+  "value": "8"
+ },
+ {
+  "placeholder": "{{p:bm25/naturality/ndcg@10_rel|pct1}}",
+  "value": "−1.9%"
+ },
+ {
+  "placeholder": "{{pr:bm25/naturality/ndcg@10_rel|pct1}}",
+  "value": "−1.8%"
+ },
+ {
+  "placeholder": "{{p:lsa/naturality/ndcg@10_rel|pct1}}",
+  "value": "−0.4%"
+ },
+ {
+  "placeholder": "{{pr:lsa/naturality/ndcg@10_rel|pct1}}",
+  "value": "−0.5%"
+ },
+ {
+  "placeholder": "{{p:rrf_bm25_lsa/naturality/ndcg@10_rel|pct1}}",
+  "value": "0.5%"
+ },
+ {
+  "placeholder": "{{pr:rrf_bm25_lsa/naturality/ndcg@10_rel|pct1}}",
+  "value": "0.5%"
+ },
+ {
+  "placeholder": "{{s:bm25/rho|f2}}",
+  "value": "−0.67"
+ },
+ {
+  "placeholder": "{{s:lsa/rho|f2}}",
+  "value": "−0.60"
+ },
+ {
+  "placeholder": "{{s:rrf_bm25_lsa/rho|f2}}",
+  "value": "−0.67"
+ },
+ {
+  "placeholder": "{{sr:bm25/rho|f2}}",
+  "value": "−0.70"
+ },
+ {
+  "placeholder": "{{sr:lsa/rho|f2}}",
+  "value": "−0.63"
+ },
+ {
+  "placeholder": "{{sr:rrf_bm25_lsa/rho|f2}}",
+  "value": "−0.70"
+ },
+ {
+  "placeholder": "{{x:typo_vocab_hits|int}}",
+  "value": "0"
+ },
+ {
+  "placeholder": "{{x:typo_total|int}}",
+  "value": "279"
+ },
+ {
+  "placeholder": "{{m:total_runtime_s|f2}}",
+  "value": "10.02"
+ },
+ {
+  "placeholder": "{{m:python|pyver}}",
+  "value": "3.13.16"
+ },
+ {
+  "placeholder": "{{m:packages/numpy|str}}",
+  "value": "2.5.4"
+ },
+ {
+  "placeholder": "{{m:packages/scipy|str}}",
+  "value": "1.18.1"
+ },
+ {
+  "placeholder": "{{m:packages/pandas|str}}",
+  "value": "3.0.5"
+ },
+ {
+  "placeholder": "{{m:packages/scikit-learn|str}}",
+  "value": "1.9.1"
+ },
+ {
+  "placeholder": "{{m:packages/snowballstemmer|str}}",
+  "value": "3.1.1"
+ },
+ {
+  "placeholder": "{{x:n_assistant_written|int}}",
+  "value": "279"
+ },
+ {
+  "placeholder": "{{x:n_machine_candidates|int}}",
+  "value": "455"
+ },
+ {
+  "placeholder": "{{p:bm25/paraphrasing/ndcg@10_rel|pct1abs}}",
+  "value": "13.3%"
+ }
+]

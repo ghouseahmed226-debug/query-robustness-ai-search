@@ -1,0 +1,8 @@
+\usepackage{caption}
+\captionsetup{labelformat=empty,font=small,justification=raggedright,singlelinecheck=false}
+\DeclareUnicodeCharacter{2212}{\ensuremath{-}}
+\usepackage{etoolbox}
+\AtBeginEnvironment{longtable}{\small}
+\setlength{\emergencystretch}{3em}
+% natbib redefines \bibsection when it is loaded (after this header); the manuscript has its own "References" heading, so drop the second one
+\AtBeginDocument{\renewcommand{\bibsection}{}}

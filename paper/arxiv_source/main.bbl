@@ -1,0 +1,220 @@
+\begin{thebibliography}{27}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Alaofi et~al.(2023)Alaofi, Gallagher, Sanderson, Scholer, and
+  Thomas]{alaofi2023}
+Marwah Alaofi, Luke Gallagher, Mark Sanderson, Falk Scholer, and Paul Thomas.
+\newblock Can generative {LLMs} create query variants for test collections? an
+  exploratory study.
+\newblock In \emph{Proceedings of the 46th International ACM SIGIR Conference
+  on Research and Development in Information Retrieval}, pages 1869--1873. ACM,
+  2023.
+\newblock \doi{10.1145/3539618.3591960}.
+
+\bibitem[Bailey et~al.(2016)Bailey, Moffat, Scholer, and Thomas]{bailey2016}
+Peter Bailey, Alistair Moffat, Falk Scholer, and Paul Thomas.
+\newblock {UQV100}: A test collection with query variability.
+\newblock In \emph{Proceedings of the 39th International ACM SIGIR Conference
+  on Research and Development in Information Retrieval}, pages 725--728. ACM,
+  2016.
+\newblock \doi{10.1145/2911451.2914671}.
+
+\bibitem[Bailey et~al.(2017)Bailey, Moffat, Scholer, and Thomas]{bailey2017}
+Peter Bailey, Alistair Moffat, Falk Scholer, and Paul Thomas.
+\newblock Retrieval consistency in the presence of query variations.
+\newblock In \emph{Proceedings of the 40th International ACM SIGIR Conference
+  on Research and Development in Information Retrieval}, pages 395--404. ACM,
+  2017.
+\newblock \doi{10.1145/3077136.3080839}.
+
+\bibitem[Boboris(2023)]{arxiv_ai_policy}
+Kat Boboris.
+\newblock {arXiv} announces new policy on {ChatGPT} and similar tools.
+\newblock arXiv blog, 31 January 2023,
+  \url{https://blog.arxiv.org/2023/01/31/arxiv-announces-new-policy-on-chatgpt-and-similar-tools},
+  2023.
+\newblock Accessed 22 October 2026.
+
+\bibitem[Campese et~al.(2025)Campese, Moschitti, and Lauriola]{campese2025}
+Stefano Campese, Alessandro Moschitti, and Ivano Lauriola.
+\newblock Improving document retrieval coherence for semantically equivalent
+  queries.
+\newblock arXiv preprint arXiv:2508.07975, 2025.
+
+\bibitem[Cormack et~al.(2009)Cormack, Clarke, and Buettcher]{cormack2009}
+Gordon~V. Cormack, Charles L.~A. Clarke, and Stefan Buettcher.
+\newblock Reciprocal rank fusion outperforms {C}ondorcet and individual rank
+  learning methods.
+\newblock In \emph{Proceedings of the 32nd International ACM SIGIR Conference
+  on Research and Development in Information Retrieval}, pages 758--759. ACM,
+  2009.
+\newblock \doi{10.1145/1571941.1572114}.
+
+\bibitem[Deerwester et~al.(1990)Deerwester, Dumais, Furnas, Landauer, and
+  Harshman]{deerwester1990}
+Scott Deerwester, Susan~T. Dumais, George~W. Furnas, Thomas~K. Landauer, and
+  Richard Harshman.
+\newblock Indexing by latent semantic analysis.
+\newblock \emph{Journal of the American Society for Information Science},
+  41\penalty0 (6):\penalty0 391--407, 1990.
+
+\bibitem[Hagen et~al.(2024)Hagen, Scells, and Potthast]{hagen2024}
+Tim Hagen, Harrisen Scells, and Martin Potthast.
+\newblock Revisiting query variation robustness of transformer models.
+\newblock In \emph{Findings of the Association for Computational Linguistics:
+  EMNLP 2024}, pages 4283--4296, Miami, Florida, USA, 2024. Association for
+  Computational Linguistics.
+\newblock \doi{10.18653/v1/2024.findings-emnlp.248}.
+
+\bibitem[Holm(1979)]{holm1979}
+S.~Holm.
+\newblock A simple sequentially rejective multiple test procedure.
+\newblock \emph{Scandinavian Journal of Statistics}, 6\penalty0 (2):\penalty0
+  65--70, 1979.
+
+\bibitem[{ir\_datasets}(2026)]{irdatasets_vaswani}
+{ir\_datasets}.
+\newblock Vaswani.
+\newblock \url{https://ir-datasets.com/vaswani.html}, 2026.
+\newblock Accessed 20 October 2026.
+
+\bibitem[J{\"a}rvelin and Kek{\"a}l{\"a}inen(2002)]{jarvelin2002}
+Kalervo J{\"a}rvelin and Jaana Kek{\"a}l{\"a}inen.
+\newblock Cumulated gain-based evaluation of {IR} techniques.
+\newblock \emph{ACM Transactions on Information Systems}, 20\penalty0
+  (4):\penalty0 422--446, 2002.
+\newblock \doi{10.1145/582415.582418}.
+
+\bibitem[Li et~al.(2026)Li, Eustratiadis, Fan, and Kanoulas]{li2026}
+Yongkang Li, Panagiotis Eustratiadis, Yixing Fan, and Evangelos Kanoulas.
+\newblock On the robustness of {LLM}-based dense retrievers: A systematic
+  analysis of generalizability and stability.
+\newblock arXiv preprint arXiv:2604.16576, 2026.
+\newblock Version 1, 17 April 2026; not peer reviewed as far as the arXiv page
+  shows.
+
+\bibitem[Moffat et~al.(2015)Moffat, Scholer, Thomas, and Bailey]{moffat2015}
+Alistair Moffat, Falk Scholer, Paul Thomas, and Peter Bailey.
+\newblock Pooled evaluation over query variations.
+\newblock In \emph{Proceedings of the 24th ACM International Conference on
+  Information and Knowledge Management}, pages 1759--1762. ACM, 2015.
+\newblock \doi{10.1145/2806416.2806606}.
+
+\bibitem[Penha et~al.(2022)Penha, C{\^a}mara, and Hauff]{penha2022}
+Gustavo Penha, Arthur C{\^a}mara, and Claudia Hauff.
+\newblock Evaluating the robustness of retrieval pipelines with query variation
+  generators.
+\newblock In \emph{Advances in Information Retrieval (ECIR 2022)}, Lecture
+  Notes in Computer Science, pages 397--412. Springer, 2022.
+\newblock \doi{10.1007/978-3-030-99736-6_27}.
+\newblock arXiv:2111.13057.
+
+\bibitem[Per{\c{c}}in et~al.(2025)Per{\c{c}}in, Su, Syed, Howard, Kuvshinov,
+  Schwinn, and Scholl]{percin2025}
+Sezen Per{\c{c}}in, Xin Su, Qutub~Sha Syed, Phillip Howard, Aleksei Kuvshinov,
+  Leo Schwinn, and Kay-Ulrich Scholl.
+\newblock Investigating the robustness of retrieval-augmented generation at the
+  query level.
+\newblock arXiv preprint arXiv:2507.06956, 2025.
+\newblock Version 1, 9 July 2025.
+
+\bibitem[Porter(1980)]{porter1980}
+M.~F. Porter.
+\newblock An algorithm for suffix stripping.
+\newblock \emph{Program: Electronic Library and Information Systems},
+  14\penalty0 (3):\penalty0 130--137, 1980.
+\newblock \doi{10.1108/eb046814}.
+
+\bibitem[Robertson and Zaragoza(2009)]{robertson2009}
+Stephen Robertson and Hugo Zaragoza.
+\newblock The probabilistic relevance framework: {BM25} and beyond.
+\newblock \emph{Foundations and Trends in Information Retrieval}, 3\penalty0
+  (4):\penalty0 333--389, 2009.
+\newblock \doi{10.1561/1500000019}.
+
+\bibitem[Sidiropoulos and Kanoulas(2022)]{sidiropoulos2022}
+Georgios Sidiropoulos and Evangelos Kanoulas.
+\newblock Analysing the robustness of dual encoders for dense retrieval against
+  misspellings.
+\newblock In \emph{Proceedings of the 45th International ACM SIGIR Conference
+  on Research and Development in Information Retrieval}, pages 2132--2136. ACM,
+  2022.
+\newblock \doi{10.1145/3477495.3531818}.
+
+\bibitem[Sidiropoulos and Kanoulas(2024)]{sidiropoulos2024}
+Georgios Sidiropoulos and Evangelos Kanoulas.
+\newblock Improving the robustness of dense retrievers against typos via
+  multi-positive contrastive learning.
+\newblock arXiv preprint arXiv:2403.10939, 2024.
+\newblock Version 1, 16 March 2024.
+
+\bibitem[Smucker et~al.(2007)Smucker, Allan, and Carterette]{smucker2007}
+Mark~D. Smucker, James Allan, and Ben Carterette.
+\newblock A comparison of statistical significance tests for information
+  retrieval evaluation.
+\newblock In \emph{Proceedings of the 16th ACM Conference on Information and
+  Knowledge Management}, pages 623--632. ACM, 2007.
+\newblock \doi{10.1145/1321440.1321528}.
+
+\bibitem[Tasawong et~al.(2023)Tasawong, Ponwitayarat, Limkonchotiwat,
+  Udomcharoenchaikit, Chuangsuwanich, and Nutanong]{tasawong2023}
+Panuthep Tasawong, Wuttikorn Ponwitayarat, Peerat Limkonchotiwat, Can
+  Udomcharoenchaikit, Ekapol Chuangsuwanich, and Sarana Nutanong.
+\newblock Typo-robust representation learning for dense retrieval.
+\newblock In \emph{Proceedings of the 61st Annual Meeting of the Association
+  for Computational Linguistics (Volume 2: Short Papers)}, pages 1106--1115,
+  Toronto, Canada, 2023. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2023.acl-short.95}.
+
+\bibitem[Thakur et~al.(2021)Thakur, Reimers, R{\"u}ckl{\'e}, Srivastava, and
+  Gurevych]{thakur2021}
+Nandan Thakur, Nils Reimers, Andreas R{\"u}ckl{\'e}, Abhishek Srivastava, and
+  Iryna Gurevych.
+\newblock {BEIR}: A heterogenous benchmark for zero-shot evaluation of
+  information retrieval models.
+\newblock NeurIPS 2021 Datasets and Benchmarks Track; arXiv:2104.08663, 2021.
+
+\bibitem[{University of Glasgow, Information Retrieval
+  Group}(2026)]{glasgow_npl}
+{University of Glasgow, Information Retrieval Group}.
+\newblock {NPL} test collection (resources page).
+\newblock \url{http://ir.dcs.gla.ac.uk/resources/test_collections/npl/}, 2026.
+\newblock Accessed October 2026.
+
+\bibitem[Van~Gysel and de~Rijke(2018)]{vangysel2018}
+Christophe Van~Gysel and Maarten de~Rijke.
+\newblock Pytrec\_eval: An extremely fast python interface to trec\_eval.
+\newblock In \emph{Proceedings of the 41st International ACM SIGIR Conference
+  on Research and Development in Information Retrieval}, pages 873--876. ACM,
+  2018.
+\newblock \doi{10.1145/3209978.3210065}.
+
+\bibitem[Webber et~al.(2010)Webber, Moffat, and Zobel]{webber2010}
+William Webber, Alistair Moffat, and Justin Zobel.
+\newblock A similarity measure for indefinite rankings.
+\newblock \emph{ACM Transactions on Information Systems}, 28\penalty0 (4),
+  2010.
+\newblock \doi{10.1145/1852102.1852106}.
+
+\bibitem[Zhuang and Zuccon(2021)]{zhuang2021}
+Shengyao Zhuang and Guido Zuccon.
+\newblock Dealing with typos for {BERT}-based passage retrieval and ranking.
+\newblock In \emph{Proceedings of the 2021 Conference on Empirical Methods in
+  Natural Language Processing}, pages 2836--2842. Association for Computational
+  Linguistics, 2021.
+\newblock \doi{10.18653/v1/2021.emnlp-main.225}.
+
+\bibitem[Zhuang and Zuccon(2022)]{zhuang2022}
+Shengyao Zhuang and Guido Zuccon.
+\newblock {CharacterBERT} and self-teaching for improving the robustness of
+  dense retrievers on queries with typos.
+\newblock In \emph{Proceedings of the 45th International ACM SIGIR Conference
+  on Research and Development in Information Retrieval}, pages 1444--1454. ACM,
+  2022.
+\newblock \doi{10.1145/3477495.3531951}.
+
+\end{thebibliography}
