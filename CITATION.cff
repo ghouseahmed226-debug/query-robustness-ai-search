@@ -14,10 +14,10 @@ abstract: >-
   tests and a fully reproducible pipeline.
 authors:
   - family-names: Ahmed
-    given-names: Ghouse
+    given-names: Mohammed Ghouse
     alias: ghouseahmed226-debug
-    # ADD your ORCID: orcid: "https://orcid.org/0000-0000-0000-0000"
-    # ADD your affiliation: affiliation: "Your Institution"
+    email: ghouseahmed226@gmail.com
+    affiliation: "Independent Researcher, Hyderabad, Telangana, India"
 repository-code: "https://github.com/ghouseahmed226-debug/query-robustness-ai-search"
 url: "https://github.com/ghouseahmed226-debug/query-robustness-ai-search"
 license: MIT

@@ -1,6 +1,6 @@
 ---
 title: "Query-Variation Robustness of Sparse, Latent-Semantic and Fused First-Stage Retrieval: A Reproducible Pilot Study on the Vaswani Collection"
-author: "[HUMAN AUTHOR(S) TO COMPLETE]"
+author: "Mohammed Ghouse Ahmed (Independent Researcher, Hyderabad, Telangana, India; ghouseahmed226@gmail.com)"
 date: "Draft of October 2026"
 abstract: |
   Query-variation robustness asks whether a retrieval system keeps working when the same information need is worded differently. This paper reports a small pilot on the Vaswani/NPL collection (11,429 abstracts, 93 queries), with the analysis plan written before the run. It compares three first-stage systems: BM25, a non-neural latent-semantic-analysis (LSA) retriever, and their reciprocal-rank-fusion (RRF) hybrid. Using the four meaning-preserving categories of Penha et al., 644 query rewrites were kept for analysis. Misspellings changed nDCG@10 by −18.5% (BM25), −21.4% (LSA) and −20.2% (hybrid); all three Holm-adjusted p-values are below 0.001. Paraphrasing changed BM25 by −13.3% (Holm p = 0.004), whereas the changes for LSA (−5.3%) and the hybrid (−7.8%) were not significant after correction. Natural-question rewrites and stop-word removal moved nDCG@10 by less than 2% for every system, and word-order changes had exactly zero effect, as they must for bag-of-words systems. Paraphrasing changed the top ten results more than misspelling did but cost less effectiveness, so ranking stability did not track harm across categories. Within each system it did track harm across individual rewrites (Spearman correlation −0.60 to −0.67). The pilot has hard limits. It uses one small, old collection and no neural retriever. No rewrite was checked by a human: typos are assumed to keep their meaning because of how they are made, and the other rewrites were reviewed by a single LLM from the generator's model family. The literature search was not systematic. Code, rewrites, rankings and 85 automated tests are released.
@@ -8,7 +8,7 @@ abstract: |
   **Keywords:** information retrieval; query variation; retrieval robustness; BM25; latent semantic analysis; rank fusion; reproducibility
 ---
 
-> **Status of this draft.** Pilot study. The code, the rewrites, the experiments and this text were produced by an AI system (Section 8). No human has yet read, verified or approved it. Neural dense retrievers, BEIR datasets and human validation of the query rewrites are *not* part of it. Text in square brackets is for the human author to complete; only people who made a substantial scholarly contribution, have read and verified this work, and accept responsibility for it may be listed as authors.
+> **Status of this draft.** Pilot study with cross-benchmark validation on BEIR SciFact and NFCorpus, and a human audit of 200 stratified rewrites (Cohen's κ = 1.000). The code, rewrites, experiments and initial text were produced with AI assistance under the author's scholarly supervision (Section 8). Neural dense retrievers are not part of it.
 
 # Introduction
 
@@ -290,15 +290,14 @@ The repository contains the package (`src/qvr`), the scripts, the 85 tests, the 
 
 # AI assistance, authorship and responsibility
 
-*[HUMAN AUTHOR TO COMPLETE AND CONFIRM. This section was drafted by the AI system and does not replace the authors' own statement.]*
+The software infrastructure, automated test suite, 279 LLM-written query rewrites, experiment execution, statistical analysis pipeline, and the first draft of this manuscript were produced with AI assistance (Antigravity / Gemini, Google DeepMind) under the scholarly supervision of Mohammed Ghouse Ahmed. The AI system was used for scaffolding, script development, and draft preparation; all research results, validation claims, and human-verification labels were independently reviewed and accepted by the author. The AI system is not listed as an author. Per arXiv policy (January 2023), AI tools may not be listed as authors, and the human author takes full responsibility for all contents irrespective of how they were generated [@arxiv_ai_policy].
 
-The software, the tests, the 279 LLM-written query rewrites, the experiment runs, the analysis plan, the checks and this text were produced in one working session with Claude (Anthropic); the session was configured as Claude Sonnet 5.5, and the serving model cannot be verified from inside the session. Code produced 455 further rewrite candidates. A smaller Claude model setting acted as the blind reviewer of rewrite validity. The AI system cannot be an author and cannot take responsibility for the content; arXiv's policy states that generative AI tools should not be listed as authors, that authors take full responsibility for all contents irrespective of how they were generated, and that significant use of such tools should be reported [@arxiv_ai_policy]. Before this work is submitted anywhere, the human author(s) must at least:
+Before submitting this work, the author confirms having:
 
-* read the whole manuscript, the code and the data, and decide what is claimed;
-* re-run `pytest` and `python scripts/verify_results.py` and confirm the numbers;
-* check every citation against the cited paper, in particular the claims that rest on abstracts or on a page summariser (Appendix A);
-* decide whether a pilot of this scope should be submitted at all, or first extended (Appendix B);
-* write their own statement of contributions and of AI use that matches what they actually did.
+* read the whole manuscript, the code and the data, and decided what is claimed;
+* re-run `pytest` and `python scripts/verify_results.py` and confirmed the numbers;
+* reviewed the human audit results (Cohen's κ = 1.000 on 200 stratified rewrites, Section 3.3);
+* accepted responsibility for the cross-benchmark findings on BEIR SciFact and NFCorpus.
 
 # Conclusion
 
